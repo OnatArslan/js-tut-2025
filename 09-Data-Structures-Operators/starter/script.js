@@ -45,3 +45,5 @@ const restaurant = {
     },
   },
 };
+
+console.log("Hello from the other side");
