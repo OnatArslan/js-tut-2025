@@ -8,3 +8,4 @@ console.log(`Log to cause`);
 console.log(`Hello world`);
 console.log(`Tomorrow we ll start`);
 console.log(`Dont do it`);
+console.log(`Do it `);
