@@ -15,3 +15,4 @@ console.log(`Hello world`);
 console.log(`Masayuku`);
 console.log(`Hello world`);
 console.log(`Start again`);
+console.log(`Hello world`);
