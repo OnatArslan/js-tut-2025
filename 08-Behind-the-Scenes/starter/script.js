@@ -100,3 +100,5 @@ console.log(human.getFullName());
 // In event handlers this keyword refers to DOM element that the handler attached to.
 
 console.log(this); // This will print Window object
+
+// If you use this keyword use function expression if you dont need to use this keyword use arrow function
