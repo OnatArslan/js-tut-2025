@@ -73,3 +73,12 @@ const dog = {
 console.log(dog.calculateAgeExpression(2025));
 
 console.log(dog.calculateShortHand(currentYear));
+
+// Let's assume that ve have global variables like x, y, z
+// They are global variables and that because they are belong to window object but this is only true if we use var
+var x = 12;
+var y = 'hello';
+var z = true;
+console.log(window.x);
+console.log(window.y);
+console.log(window.z);
