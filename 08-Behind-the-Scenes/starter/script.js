@@ -137,3 +137,15 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8];
 console.log(array); // Burasi arrayi obje olarak yazdirir yani bu sadece array doner
 console.log(...array); // Bu array elementlerini tek tek doner
 // hey
+
+// Shallow copys and Deep copys
+// This location variable is the not real object just referance for this object
+const loc = {
+  city: `Lisbon`,
+  code: 2000,
+};
+// That because if we give this object to another object like below
+const newloc = loc;
+newloc.city = `Paris`;
+
+console.log(loc); // As we see the original location object is changed
