@@ -98,3 +98,5 @@ const human = {
 console.log(human.getFullName());
 
 // In event handlers this keyword refers to DOM element that the handler attached to.
+
+console.log(this); // This will print Window object
