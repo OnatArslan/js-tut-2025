@@ -97,4 +97,4 @@ const human = {
 
 console.log(human.getFullName());
 
-// In event handlers this keyword refers to DOM element that the handler attached to
+// In event handlers this keyword refers to DOM element that the handler attached to.
