@@ -3,6 +3,8 @@
 // This currentYear variable is also in global scope
 const currentYear = 2025;
 
+console.log(`${getFullName(`Onat`, `Arslan`)} is ${calcAge(2001)} years old`);
+
 // This calcAge function is in global scope
 function calcAge(birthDate) {
   const age = currentYear - birthDate;
@@ -17,4 +19,15 @@ function getFullName(name, surname) {
   return `${name} ${surname}`;
 }
 
-console.log(`${getFullName(`Onat`, `Arslan`)} is ${calcAge(2001)} years old`);
+// HOISTING IN JAVASCRIPT
+console.log(variable1); // It will print undefined because var not hoisting value just location
+var variable1 = 'Hello world';
+
+// console.log(variable2); This will throw an error because const and let variables can not do hoisting
+const variable2 = 'Hello world';
+
+const sayHi = username => {
+  console.log(`Hello ${username}`);
+};
+
+sayHi(`Kenanke`);
