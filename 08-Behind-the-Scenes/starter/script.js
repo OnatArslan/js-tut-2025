@@ -50,3 +50,26 @@ const notHoistedArrFunction = msg => {
   console.log(this); // arrow function does not have this property that because do not use
 };
 notHoistedArrFunction();
+
+const dog = {
+  ad: `rex`,
+  cinst: `labrador`,
+  kilo: 24,
+  dgmy: 2018,
+  //   calculateAgeArrow: currentYear => {
+  //     return currentYear - this.dgmy; // This will return NaN because arrow functions do not have permission to use this keyword
+  //   },
+
+  calculateAgeExpression: function (currentYear) {
+    return currentYear - this.dgmy; // This will work because function expressions can access to the this keyword
+  },
+  //   For shother syntax we can use shothand method
+  calculateShortHand(currentYear) {
+    return currentYear - this.dgmy;
+  },
+};
+
+// console.log(dog.calculateAgeArrow(2025));
+console.log(dog.calculateAgeExpression(2025));
+
+console.log(dog.calculateShortHand(currentYear));
