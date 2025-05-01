@@ -5,7 +5,12 @@ const currentYear = 2025;
 
 // This calcAge function is in global scope
 function calcAge(birthDate) {
-  return currentYear - birthDate;
+  const age = currentYear - birthDate;
+  function printAge() {
+    const output = `You are ${age}, born in ${birthDate}`;
+    return output;
+  }
+  return printAge();
 }
 
 function getFullName(name, surname) {
