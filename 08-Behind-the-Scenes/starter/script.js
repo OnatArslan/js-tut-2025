@@ -82,3 +82,17 @@ var z = true;
 console.log(window.x);
 console.log(window.y);
 console.log(window.z);
+
+// THIS KEYWORD AND VARIABLE
+// In short all execution context(functions) has one owner and this refers to the owner
+
+// In method(object function) this will refer to object
+const human = {
+  name: `Onat`,
+  surname: `Arslan`,
+  getFullName: function () {
+    return `${this.name} ${this.surname}`;
+  },
+};
+
+console.log(human.getFullName());
