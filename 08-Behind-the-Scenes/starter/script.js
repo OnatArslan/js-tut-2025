@@ -158,3 +158,156 @@ thirdLoc.city = `Istanbul`;
 
 console.log(loc); // It will print Paris
 console.log(thirdLoc); // It will print Istanbul
+
+const users = [
+  {
+    name: 'John',
+    surname: 'Doe',
+    email: 'john.doe@example.com',
+    age: 28,
+    isMarried: false,
+  },
+  {
+    name: 'Jane',
+    surname: 'Smith',
+    email: 'jane.smith@example.com',
+    age: 34,
+    isMarried: true,
+  },
+  {
+    name: 'Ali',
+    surname: 'Yılmaz',
+    email: 'ali.yilmaz@example.com',
+    age: 25,
+    isMarried: false,
+  },
+  {
+    name: 'Ayşe',
+    surname: 'Demir',
+    email: 'ayse.demir@example.com',
+    age: 31,
+    isMarried: true,
+  },
+  {
+    name: 'Michael',
+    surname: 'Johnson',
+    email: 'm.johnson@example.com',
+    age: 45,
+    isMarried: true,
+  },
+  {
+    name: 'Emily',
+    surname: 'Brown',
+    email: 'emily.brown@example.com',
+    age: 22,
+    isMarried: false,
+  },
+  {
+    name: 'Carlos',
+    surname: 'Garcia',
+    email: 'carlos.garcia@example.com',
+    age: 39,
+    isMarried: true,
+  },
+  {
+    name: 'Linda',
+    surname: 'Martinez',
+    email: 'linda.martinez@example.com',
+    age: 27,
+    isMarried: false,
+  },
+  {
+    name: 'Mehmet',
+    surname: 'Kara',
+    email: 'mehmet.kara@example.com',
+    age: 33,
+    isMarried: true,
+  },
+  {
+    name: 'Zeynep',
+    surname: 'Çelik',
+    email: 'zeynep.celik@example.com',
+    age: 30,
+    isMarried: false,
+  },
+  {
+    name: 'David',
+    surname: 'Wilson',
+    email: 'david.wilson@example.com',
+    age: 29,
+    isMarried: true,
+  },
+  {
+    name: 'Laura',
+    surname: 'Moore',
+    email: 'laura.moore@example.com',
+    age: 24,
+    isMarried: false,
+  },
+  {
+    name: 'Fatma',
+    surname: 'Şahin',
+    email: 'fatma.sahin@example.com',
+    age: 36,
+    isMarried: true,
+  },
+  {
+    name: 'Ahmet',
+    surname: 'Polat',
+    email: 'ahmet.polat@example.com',
+    age: 26,
+    isMarried: false,
+  },
+  {
+    name: 'Sophia',
+    surname: 'Lee',
+    email: 'sophia.lee@example.com',
+    age: 32,
+    isMarried: true,
+  },
+  {
+    name: 'Ethan',
+    surname: 'Taylor',
+    email: 'ethan.taylor@example.com',
+    age: 38,
+    isMarried: true,
+  },
+  {
+    name: 'Nur',
+    surname: 'Aydın',
+    email: 'nur.aydin@example.com',
+    age: 21,
+    isMarried: false,
+  },
+  {
+    name: 'Can',
+    surname: 'Eren',
+    email: 'can.eren@example.com',
+    age: 40,
+    isMarried: true,
+  },
+  {
+    name: 'Olivia',
+    surname: 'Anderson',
+    email: 'olivia.anderson@example.com',
+    age: 29,
+    isMarried: false,
+  },
+  {
+    name: 'Jack',
+    surname: 'Thomas',
+    email: 'jack.thomas@example.com',
+    age: 35,
+    isMarried: true,
+  },
+];
+
+const marriedUsers = users.filter((el, i, arr) => {
+  return el.isMarried === true;
+});
+const notMarriedUsers = users.filter((el, i, arr) => {
+  return el.isMarried === false;
+});
+
+console.log(marriedUsers.length);
+console.log(notMarriedUsers.length);
