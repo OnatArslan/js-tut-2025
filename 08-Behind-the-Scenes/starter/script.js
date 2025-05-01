@@ -31,3 +31,15 @@ const sayHi = username => {
 };
 
 sayHi(`Kenanke`);
+
+// In this case if we want to use hoisting in functions we need to use function declaration like below
+hoisting('hey');
+function hoisting(msg) {
+  console.log(msg);
+}
+
+const notHoistedFunction = function (msg) {
+  console.log(msg);
+};
+
+const notHoistedArrFunction = msg => console.log(msg);
