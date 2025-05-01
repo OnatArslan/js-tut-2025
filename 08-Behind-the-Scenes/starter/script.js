@@ -144,8 +144,17 @@ const loc = {
   city: `Lisbon`,
   code: 2000,
 };
+
 // That because if we give this object to another object like below
 const newloc = loc;
 newloc.city = `Paris`;
 
-console.log(loc); // As we see the original location object is changed
+console.log(loc); // As we see the original location object is changed (shallow copy)
+console.log(newloc);
+
+// But if we want deep copy
+const thirdLoc = { ...loc };
+thirdLoc.city = `Istanbul`;
+
+console.log(loc); // It will print Paris
+console.log(thirdLoc); // It will print Istanbul
