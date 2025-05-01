@@ -36,10 +36,17 @@ sayHi(`Kenanke`);
 hoisting('hey');
 function hoisting(msg) {
   console.log(msg);
+  console.log(this);
 }
 
 const notHoistedFunction = function (msg) {
   console.log(msg);
+  console.log(this);
 };
+notHoistedFunction(`hey`);
 
-const notHoistedArrFunction = msg => console.log(msg);
+const notHoistedArrFunction = msg => {
+  console.log(`hey`);
+  console.log(this); // arrow function does not have this property that because do not use
+};
+notHoistedArrFunction();
