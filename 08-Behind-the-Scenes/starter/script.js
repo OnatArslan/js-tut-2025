@@ -8,4 +8,8 @@ function calcAge(birthDate) {
   return currentYear - birthDate;
 }
 
-console.log(calcAge(2002));
+function getFullName(name, surname) {
+  return `${name} ${surname}`;
+}
+
+console.log(`${getFullName(`Onat`, `Arslan`)} is ${calcAge(2001)} years old`);
