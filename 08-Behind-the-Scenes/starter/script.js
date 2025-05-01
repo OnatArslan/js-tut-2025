@@ -311,3 +311,9 @@ const notMarriedUsers = users.filter((el, i, arr) => {
 
 console.log(marriedUsers.length);
 console.log(notMarriedUsers.length);
+
+const nameOfUsers = marriedUsers.map(el => {
+  return el.name;
+});
+
+console.log(nameOfUsers);
