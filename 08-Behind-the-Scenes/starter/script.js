@@ -102,3 +102,37 @@ console.log(human.getFullName());
 console.log(this); // This will print Window object
 
 // If you use this keyword use function expression if you dont need to use this keyword use arrow function
+
+const cat = {
+  name: `Liya`,
+  color: 'red',
+  // In here I ll create one function expression
+  sayMeow: function () {
+    // In here this will refer to cat object and cat's name is liya
+    console.log(`${this.name} says meoww!!`);
+    // But the problem is if we create another function expression we can not refer to cat object on this keyword
+    // Because of this we need to use arrow function because arrow functions inherits parent scopes this object in this stiations this is cat object
+    const sayColor = () => {
+      console.log(`My color is ${this.color}.`);
+    };
+    sayColor();
+  },
+};
+
+cat.sayMeow();
+
+// Arguments keyword
+const sumOfNumbers = function (...args) {
+  let sum = 0;
+  args.forEach((el, i, arr) => {
+    console.log(`Element is ${el} index at ${i}`);
+    sum += el;
+  });
+  console.log(sum);
+};
+
+sumOfNumbers(1, 2, 3, 4, 21);
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(array);
+console.log(...array);
