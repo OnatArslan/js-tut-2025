@@ -30,6 +30,7 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   orderFood: function (starterIndex, mainIndex) {
+    // This if block controls if indexes out of length that because return values are undefined
     if (
       this.starterMenu[starterIndex] === undefined ||
       this.mainMenu[mainIndex] === undefined
