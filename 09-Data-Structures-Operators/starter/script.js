@@ -250,3 +250,7 @@ sayHi(`Onat`, `Hakan`, `Koray`, `Samet`);
 // console.log(name, adress, pricing);
 
 // SPREAD OPERATOR
+const arr = [1, 2, 3, 4];
+
+const newArr = [...arr, 5, 6, 7];
+console.log(...newArr);
