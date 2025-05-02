@@ -269,3 +269,9 @@ const fullMenu = [...restaurant?.starterMenu, ...restaurant?.mainMenu];
 console.log(fullMenu);
 
 // fullMenu.forEach((el, index, arr) => console.log(el, index, ...arr)); This is forEach loop
+
+const str = `Jonas`;
+Array.from(`1234567890`).forEach((el, i, arr) => {
+  // str.split("") kisa yoldan stringi arraye cevirmeyi saglar
+  console.log(parseInt(el), i);
+});
