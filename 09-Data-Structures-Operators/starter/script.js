@@ -173,14 +173,18 @@ const {
     engineering: {
       manager: {
         name: engDepManagerName,
-        contact: { email: emailOfAlice },
+        contact: {
+          email: emailOfAlice,
+          phone: phoneOfAlice,
+          gmail: gmailOfAlice = `****`,
+        },
       },
     },
   },
 } = company;
 console.log(
   engDepManagerName,
-  `and the email of ${engDepManagerName} is : ${emailOfAlice}`,
+  `and the email of ${engDepManagerName} is : ${emailOfAlice} and gmail is ${gmailOfAlice}`,
 );
 
 // ARRAY DESTRUCTURING
