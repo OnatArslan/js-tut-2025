@@ -56,6 +56,14 @@ Main manu index need to between (0-${this.mainMenu.length - 1})`;
   },
 };
 // Object destructuring
+const {
+  name: restourantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restourantName, hours, tags);
+
+// ARRAY DESTRUCTURING
 
 // const arr = [2, 3, 4];
 // const b = arr[0];
