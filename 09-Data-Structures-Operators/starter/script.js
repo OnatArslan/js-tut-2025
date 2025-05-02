@@ -47,6 +47,7 @@ const restaurant = {
       close: 24,
     },
   },
+  // METHODS
   orderFood: function (starterIndex, mainIndex) {
     // This if block controls if indexes out of length that because return values are undefined
     if (
@@ -58,7 +59,18 @@ Main manu index need to between (0-${this.mainMenu.length - 1})`;
     }
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  orderDelivery: function ({ starterIndex, time, adress, mainIndex }) {
+    console.log(time, adress);
+  },
 };
+// Give object as parameter is very standart thing in options field for third party librarys like passport,prisma
+restaurant.orderDelivery({
+  time: '22:30',
+  adress: `Via del Sole, 21`,
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
 // Object destructuring
 const {
   name: restourantName,
