@@ -254,3 +254,6 @@ const arr = [1, 2, 3, 4];
 
 const newArr = [...arr.slice(1, 3), 5, 6, 7];
 console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci', 'Makaron'];
+console.log(...newMenu);
