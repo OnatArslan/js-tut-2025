@@ -267,3 +267,5 @@ console.log(restaurant.mainMenu);
 // Join two arrays
 const fullMenu = [...restaurant?.starterMenu, ...restaurant?.mainMenu];
 console.log(fullMenu);
+
+// fullMenu.forEach((el, index, arr) => console.log(el, index, ...arr)); This is forEach loop
