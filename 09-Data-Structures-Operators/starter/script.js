@@ -29,6 +29,16 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  orderFood: function (starterIndex, mainIndex) {
+    if (
+      this.starterMenu[starterIndex] === undefined ||
+      this.mainMenu[mainIndex] === undefined
+    ) {
+      return `Starter menu index need to between (0-${this.starterMenu.length - 1}) 
+Main manu index need to between (0-${this.mainMenu.length - 1})`;
+    }
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
 const arr = [2, 3, 4];
@@ -49,3 +59,6 @@ console.log(one, third);
 // Change two elements order in array with destructuring
 [one, third] = [third, one];
 console.log(one, third);
+
+const [starter, main] = restaurant.orderFood(1, 2);
+console.log(`Your starter food is ${starter} and main food is ${main}`);
