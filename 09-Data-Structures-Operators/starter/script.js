@@ -43,5 +43,9 @@ const [first, second, ...other] = restaurant.categories; // spreading the taking
 console.log(first, second);
 console.log(...other);
 
-const [one, , third] = restaurant.categories; // If we want to skip any variable we need to open a hole in this place
+let [one, , third] = restaurant.categories; // If we want to skip any variable we need to open a hole in this place
+console.log(one, third);
+
+// Change two elements order in array with destructuring
+[one, third] = [third, one];
 console.log(one, third);
