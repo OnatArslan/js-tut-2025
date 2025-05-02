@@ -29,17 +29,6 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  orderFood: function (starterIndex, mainIndex) {
-    // This if block controls if indexes out of length that because return values are undefined
-    if (
-      this.starterMenu[starterIndex] === undefined ||
-      this.mainMenu[mainIndex] === undefined
-    ) {
-      return `Starter menu index need to between (0-${this.starterMenu.length - 1}) 
-Main manu index need to between (0-${this.mainMenu.length - 1})`;
-    }
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
   openingHours: {
     thu: {
       open: 12,
@@ -53,6 +42,17 @@ Main manu index need to between (0-${this.mainMenu.length - 1})`;
       open: 0,
       close: 24,
     },
+  },
+  orderFood: function (starterIndex, mainIndex) {
+    // This if block controls if indexes out of length that because return values are undefined
+    if (
+      this.starterMenu[starterIndex] === undefined ||
+      this.mainMenu[mainIndex] === undefined
+    ) {
+      return `Starter menu index need to between (0-${this.starterMenu.length - 1}) 
+Main manu index need to between (0-${this.mainMenu.length - 1})`;
+    }
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
 // Object destructuring
