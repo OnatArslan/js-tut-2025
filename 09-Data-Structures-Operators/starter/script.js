@@ -252,5 +252,5 @@ sayHi(`Onat`, `Hakan`, `Koray`, `Samet`);
 // SPREAD OPERATOR
 const arr = [1, 2, 3, 4];
 
-const newArr = [...arr, 5, 6, 7];
+const newArr = [...arr.slice(1, 3), 5, 6, 7];
 console.log(...newArr);
