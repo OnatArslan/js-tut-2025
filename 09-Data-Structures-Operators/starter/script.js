@@ -35,8 +35,12 @@ const restaurant = {
       close: 22,
     },
     fri: {
-      open: 11,
-      close: 23,
+      open: {
+        at: 11,
+      },
+      close: {
+        at: 22,
+      },
     },
     sat: {
       open: 0,
@@ -77,11 +81,14 @@ console.log(a, b);
 // NESTED OBJECTS DESTRUCTURING
 const {
   openingHours: {
-    fri: { open: friOpen },
-    sat,
+    fri: {
+      // This place is so so fucking important
+      open: { at: openAt },
+      close: { at: closeAt },
+    },
   },
 } = restaurant;
-console.log(friOpen, sat);
+console.log(openAt, closeAt);
 
 // ARRAY DESTRUCTURING
 
