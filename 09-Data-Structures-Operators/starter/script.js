@@ -40,44 +40,59 @@ Main manu index need to between (0-${this.mainMenu.length - 1})`;
     }
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
 };
+// Object destructuring
 
-const arr = [2, 3, 4];
-const b = arr[0];
-const c = arr[1];
-const d = arr[2];
+// const arr = [2, 3, 4];
+// const b = arr[0];
+// const c = arr[1];
+// const d = arr[2];
 
-const [x, y, z] = arr; // This is array destructuring (unpacking)
-console.log(x, y, z);
+// const [x, y, z] = arr; // This is array destructuring (unpacking)
+// console.log(x, y, z);
 
-const [first, second, ...other] = restaurant.categories; // spreading the taking
-console.log(first, second);
-console.log(...other);
+// const [first, second, ...other] = restaurant.categories; // spreading the taking
+// console.log(first, second);
+// console.log(...other);
 
-let [one, , third] = restaurant.categories; // If we want to skip any variable we need to open a hole in this place
-console.log(one, third);
+// let [one, , third] = restaurant.categories; // If we want to skip any variable we need to open a hole in this place
+// console.log(one, third);
 
-// Change two elements order in array with destructuring
-[one, third] = [third, one];
-console.log(one, third);
+// // Change two elements order in array with destructuring
+// [one, third] = [third, one];
+// console.log(one, third);
 
-const [starter, main] = restaurant.orderFood(1, 2);
-console.log(`Your starter food is ${starter} and main food is ${main}`);
+// const [starter, main] = restaurant.orderFood(1, 2);
+// console.log(`Your starter food is ${starter} and main food is ${main}`);
 
-// Nested array destructuring
-const nested = [2, 4, [5, 6, 7]];
+// // Nested array destructuring
+// const nested = [2, 4, [5, 6, 7]];
 
-const [firstEl, secondEl, [nestedFirst, nestedSecond, nestedThird]] = nested; // Destructuring inside another destructuring
-console.log(firstEl, secondEl, nestedFirst, nestedSecond, nestedThird);
+// const [firstEl, secondEl, [nestedFirst, nestedSecond, nestedThird]] = nested; // Destructuring inside another destructuring
+// console.log(firstEl, secondEl, nestedFirst, nestedSecond, nestedThird);
 
-// Destructuring with default values
+// // Destructuring with default values
 
-const [p = 1, q = 1, r = 1, e = 1] = [1000, 1000, 1000];
-console.log(p, q, r, e); // e variable will be undefined
+// const [p = 1, q = 1, r = 1, e = 1] = [1000, 1000, 1000];
+// console.log(p, q, r, e); // e variable will be undefined
 
-const {
-  name = `Name is unknown`,
-  adress = 'Adress is unknown',
-  pricing = `There is not any info about pricing data`,
-} = restaurant;
-console.log(name, adress, pricing);
+// const {
+//   name = `Name is unknown`,
+//   adress = 'Adress is unknown',
+//   pricing = `There is not any info about pricing data`,
+// } = restaurant;
+// console.log(name, adress, pricing);
