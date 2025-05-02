@@ -248,3 +248,5 @@ sayHi(`Onat`, `Hakan`, `Koray`, `Samet`);
 //   pricing = `There is not any info about pricing data`,
 // } = restaurant;
 // console.log(name, adress, pricing);
+
+// SPREAD OPERATOR
