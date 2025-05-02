@@ -36,5 +36,5 @@ const b = arr[0];
 const c = arr[1];
 const d = arr[2];
 
-const [x, y, z] = arr; // This is array destructuring
+const [x, y, z] = arr; // This is array destructuring (unpacking)
 console.log(x, y, z);
