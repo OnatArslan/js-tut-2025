@@ -25,7 +25,7 @@ const mexicanFoods = new Set([
 // Data needed for first part of the section
 const restaurant = {
   name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  adress: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
@@ -38,3 +38,10 @@ const d = arr[2];
 
 const [x, y, z] = arr; // This is array destructuring (unpacking)
 console.log(x, y, z);
+
+const [first, second, ...other] = restaurant.categories; // spreading the taking
+console.log(first, second);
+console.log(...other);
+
+const [one, , third] = restaurant.categories; // If we want to skip any variable we need to open a hole in this place
+console.log(one, third);
