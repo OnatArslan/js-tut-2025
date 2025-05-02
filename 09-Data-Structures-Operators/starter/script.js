@@ -90,6 +90,99 @@ const {
 } = restaurant;
 console.log(openAt, closeAt);
 
+const company = {
+  name: 'TechCorp',
+  founded: 2010,
+  isActive: true,
+  departments: {
+    engineering: {
+      manager: {
+        name: 'Alice',
+        contact: {
+          email: 'alice@techcorp.com',
+          phone: {
+            work: '123-456-7890',
+            personal: '555-111-2222',
+          },
+        },
+      },
+      teams: {
+        frontend: {
+          lead: 'Bob',
+          members: [
+            {
+              name: 'Charlie',
+              age: 27,
+              skills: {
+                primary: 'React',
+                secondary: {
+                  name: 'TypeScript',
+                  experience: {
+                    years: 2,
+                    level: 'Intermediate',
+                  },
+                },
+              },
+            },
+          ],
+        },
+        backend: {
+          lead: 'Diana',
+          members: [
+            {
+              name: 'Eve',
+              age: 30,
+              skills: {
+                primary: 'Node.js',
+                databases: {
+                  sql: 'PostgreSQL',
+                  noSql: {
+                    name: 'MongoDB',
+                    clusters: {
+                      prod: 'ClusterA',
+                      dev: 'ClusterB',
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+      },
+    },
+    hr: {
+      manager: {
+        name: 'Frank',
+        location: {
+          floor: 3,
+          room: {
+            number: 305,
+            accessCode: {
+              main: 1234,
+              backup: 5678,
+            },
+          },
+        },
+      },
+    },
+  },
+};
+
+const {
+  departments: {
+    engineering: {
+      manager: {
+        name: engDepManagerName,
+        contact: { email: emailOfAlice },
+      },
+    },
+  },
+} = company;
+console.log(
+  engDepManagerName,
+  `and the email of ${engDepManagerName} is : ${emailOfAlice}`,
+);
+
 // ARRAY DESTRUCTURING
 
 // const arr = [2, 3, 4];
