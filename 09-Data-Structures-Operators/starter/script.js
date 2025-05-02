@@ -30,3 +30,11 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 };
+
+const arr = [2, 3, 4];
+const b = arr[0];
+const c = arr[1];
+const d = arr[2];
+
+const [x, y, z] = arr; // This is array destructuring
+console.log(x, y, z);
