@@ -71,3 +71,13 @@ const [firstEl, secondEl, [nestedFirst, nestedSecond, nestedThird]] = nested; //
 console.log(firstEl, secondEl, nestedFirst, nestedSecond, nestedThird);
 
 // Destructuring with default values
+
+const [p = 1, q = 1, r = 1, e = 1] = [1000, 1000, 1000];
+console.log(p, q, r, e); // e variable will be undefined
+
+const {
+  name = `Name is unknown`,
+  adress = 'Adress is unknown',
+  pricing = `There is not any info about pricing data`,
+} = restaurant;
+console.log(name, adress, pricing);
