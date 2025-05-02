@@ -71,8 +71,18 @@ let a = 111;
 let b = 999;
 const obj = { a: 23, b: 18, c: 14 };
 
-({ a, b } = obj);
+({ a, b } = obj); // This syntax is important
 console.log(a, b);
+
+// NESTED OBJECTS DESTRUCTURING
+const {
+  openingHours: {
+    fri: { open: friOpen },
+    sat,
+  },
+} = restaurant;
+console.log(friOpen, sat);
+
 // ARRAY DESTRUCTURING
 
 // const arr = [2, 3, 4];
