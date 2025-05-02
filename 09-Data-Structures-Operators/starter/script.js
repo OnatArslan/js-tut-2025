@@ -275,3 +275,12 @@ Array.from(`1234567890`).forEach((el, i, arr) => {
   // str.split("") kisa yoldan stringi arraye cevirmeyi saglar
   console.log(parseInt(el), i);
 });
+
+// Real-world example of using spread(...) operator with objects
+const newRestaurant = {
+  ...restaurant, // This line is copying all data from old restaurant object
+  owner: `Onat Arslan`,
+  ownedIn: 2023,
+};
+
+console.log(newRestaurant);
