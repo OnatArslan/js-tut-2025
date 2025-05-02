@@ -257,3 +257,13 @@ console.log(...newArr);
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci', 'Makaron'];
 console.log(...newMenu);
+
+// Copys of arrays with spread(...) operator
+const mainMenuCopy = [...restaurant.mainMenu];
+mainMenuCopy.pop();
+console.log(mainMenuCopy);
+console.log(restaurant.mainMenu);
+
+// Join two arrays
+const fullMenu = [...restaurant?.starterMenu, ...restaurant?.mainMenu];
+console.log(fullMenu);
