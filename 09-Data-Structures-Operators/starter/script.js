@@ -59,16 +59,14 @@ Main manu index need to between (0-${this.mainMenu.length - 1})`;
     }
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-  orderDelivery: function ({ starterIndex, time, adress, mainIndex }) {
-    console.log(time, adress);
+  orderDelivery: function ({ starterIndex = 0, time, adress, mainIndex = 0 }) {
+    console.log(time, adress, mainIndex, starterIndex);
   },
 };
 // Give object as parameter is very standart thing in options field for third party librarys like passport,prisma
 restaurant.orderDelivery({
   time: '22:30',
   adress: `Via del Sole, 21`,
-  mainIndex: 2,
-  starterIndex: 2,
 });
 
 // Object destructuring
@@ -198,6 +196,16 @@ console.log(
   engDepManagerName,
   `and the email of ${engDepManagerName} is : ${emailOfAlice} and gmail is ${gmailOfAlice}`,
 );
+
+// This is default parameter passing to any function
+function sayHi(nameOfUser = `Unknown`, ...others) {
+  console.log(`Hello ${nameOfUser}`);
+  const middleOnes = others.slice(0, others.length - 1);
+  const lastOne = others[others.length - 1];
+  console.log(`Hello ${middleOnes}`);
+  console.log(`Hello ${lastOne}`);
+}
+sayHi(`Onat`, `Hakan`, `Koray`, `Samet`);
 
 // ARRAY DESTRUCTURING
 
