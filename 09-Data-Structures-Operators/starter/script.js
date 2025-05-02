@@ -65,8 +65,9 @@ const [starter, main] = restaurant.orderFood(1, 2);
 console.log(`Your starter food is ${starter} and main food is ${main}`);
 
 // Nested array destructuring
-
 const nested = [2, 4, [5, 6, 7]];
 
 const [firstEl, secondEl, [nestedFirst, nestedSecond, nestedThird]] = nested; // Destructuring inside another destructuring
 console.log(firstEl, secondEl, nestedFirst, nestedSecond, nestedThird);
+
+// Destructuring with default values
