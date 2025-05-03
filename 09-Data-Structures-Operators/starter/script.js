@@ -310,4 +310,9 @@ add(5, 3, 7, 2);
 restaurant.orderPizza(`Salmon`, `Hayday`, `Pepper`);
 
 // SHORT CIRCUITING ------------------------------------------------------------------------------------------------------------------
+// IN OR Short circ first truthy value will be returned
 console.log(`` || `Onat`);
+
+restaurant.numGuests = 23;
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 0;
+console.log(guest1);
