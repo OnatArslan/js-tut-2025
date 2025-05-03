@@ -398,7 +398,7 @@ Main manu index need to between (0-${this.mainMenu.length - 1})`;
   orderDelivery({ starterIndex = 0, time, adress, mainIndex = 0 }) {
     console.log(time, adress, mainIndex, starterIndex);
   },
-  orderPizza(mainIngredient, ...otherIngredients) {
+  orderPizza: function (mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
