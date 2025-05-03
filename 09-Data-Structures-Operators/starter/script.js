@@ -455,3 +455,9 @@ const plane = `A320`;
 console.log(plane.at(0)); // A
 
 console.log(airline.split(` `)); // ['TAP', 'Air', 'Portugal']
+
+console.log(airline.length); // This will print length of string
+
+console.log(airline.indexOf(`i`));
+
+console.log(airline.slice(airline.indexOf(`A`), airline.indexOf(`g`) + 1));
