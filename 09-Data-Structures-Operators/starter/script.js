@@ -319,3 +319,6 @@ console.log(guest1);
 
 const guest2 = restaurant.numGuests || 10;
 console.log(guest2);
+
+// AND SHORT CIRCUITING
+console.log(`------AND-------`);
