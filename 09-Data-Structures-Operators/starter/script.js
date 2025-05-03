@@ -475,3 +475,9 @@ const fixedPassangerName = passanger.toLowerCase();
 const passangerCorrect =
   fixedPassangerName[0].toUpperCase() + fixedPassangerName.slice(1);
 console.log(passangerCorrect);
+
+const email = `onat@gmail.com`;
+const inputEmail = `    OnAt@gmAil.com    `;
+
+const fixedInput = inputEmail.trim().toLowerCase();
+console.log(fixedInput);
