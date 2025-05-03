@@ -443,3 +443,15 @@ console.log(commonFoods);
 const rest = new Map();
 rest.set(`name`, `Classico Itallion`);
 console.log(rest);
+
+const arr4 = [1, 2, 3, 4, 5, 6, 7];
+
+console.log(arr4.slice(1, 5));
+
+// STRING METHODS -----------------------------------------------------------------------------------------
+const airline = `TAP Air Portugal`;
+const plane = `A320`;
+
+console.log(plane.at(0)); // A
+
+console.log(airline.split(` `)); // ['TAP', 'Air', 'Portugal']
