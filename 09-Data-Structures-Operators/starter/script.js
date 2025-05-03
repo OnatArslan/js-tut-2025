@@ -292,3 +292,7 @@ console.log(arr2);
 // REST BECAUSE LEFT HAND OF = OP
 const [el1, , ...otherEls] = [1, 2, 3, 4, 5, 6, 7];
 console.log(otherEls);
+
+// OBJECTS
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(sat, weekdays);
