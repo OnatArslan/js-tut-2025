@@ -469,3 +469,9 @@ const checkMiddleSeat = function (seat) {
 };
 
 checkMiddleSeat(`11E`);
+
+const passanger = 'oNaT';
+const fixedPassangerName = passanger.toLowerCase();
+const passangerCorrect =
+  fixedPassangerName[0].toUpperCase() + fixedPassangerName.slice(1);
+console.log(passangerCorrect);
