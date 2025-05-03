@@ -323,3 +323,20 @@ console.log(guest2);
 // AND SHORT CIRCUITING
 console.log(`------AND-------`);
 console.log(0 && `jonas`);
+
+// NULLISH COELESCING OP (??) only look nullish values(undefined and null)
+
+const rest1 = {
+  name: `Capri`,
+  numGuests: 13,
+};
+
+const rest2 = {
+  name: `Zagri`,
+  owner: `Onat Arslan`,
+};
+
+rest2.numGuest = rest2.numGuest ?? 0;
+rest1.numGuests ??= 10; // This syntax is shorthand for upper line line-339
+console.log(rest2);
+console.log(rest1);
