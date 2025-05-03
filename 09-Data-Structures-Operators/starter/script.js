@@ -502,3 +502,5 @@ console.log(plane2.includes(`A3`));
 console.log(plane2.endsWith(`neo`));
 console.log(plane2.startsWith(`A32`));
 console.log(plane2.search(`n`)); // It will print the starting index
+
+// SPLIT METHOD
