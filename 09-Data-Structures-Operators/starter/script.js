@@ -362,12 +362,8 @@ const openingHours = {
     close: 22,
   },
   fri: {
-    open: {
-      at: 11,
-    },
-    close: {
-      at: 22,
-    },
+    open: 12,
+    close: 12,
   },
   sat: {
     open: 0,
@@ -419,3 +415,18 @@ days.forEach((day, i, arr) => {
 // OPTIONAL CHANING WITH METHODS
 const newValue = restaurant.orderSmth?.(`This function is not exist`); // There is not such a function orderSmth
 console.log(newValue);
+
+// LOOPING OBJECTS entries is all keys is keys and values is values array
+for (const [key, value] of Object.entries(restaurantGuesso)) {
+  console.log(key, value);
+}
+
+const openinHours2 = {
+  ...openingHours,
+};
+
+for (const [key, { open, close }] of Object.entries(openinHours2)) {
+  console.log(
+    `${key.toUpperCase()} is open at: ${open} and close at: ${close}`,
+  );
+}
