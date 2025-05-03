@@ -430,3 +430,5 @@ for (const [key, { open, close }] of Object.entries(openinHours2)) {
     `${key.toUpperCase()} is open at: ${open} and close at: ${close}`,
   );
 }
+
+// SETS ON JAVASCRIPT
