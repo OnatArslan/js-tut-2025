@@ -313,6 +313,9 @@ restaurant.orderPizza(`Salmon`, `Hayday`, `Pepper`);
 // IN OR Short circ first truthy value will be returned
 console.log(`` || `Onat`);
 
-restaurant.numGuests = 23;
+// restaurant.numGuests = 19;
 const guest1 = restaurant.numGuests ? restaurant.numGuests : 0;
 console.log(guest1);
+
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
