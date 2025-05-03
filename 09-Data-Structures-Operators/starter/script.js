@@ -284,3 +284,11 @@ const newRestaurant = {
 };
 
 console.log(newRestaurant);
+
+// SPREAD BECAUSE RIGHT HAND OPERATOR
+const arr2 = [1, 2, ...[3, 4]];
+console.log(arr2);
+
+// REST BECAUSE LEFT HAND OF = OP
+const [el1, , ...otherEls] = [1, 2, 3, 4, 5, 6, 7];
+console.log(otherEls);
