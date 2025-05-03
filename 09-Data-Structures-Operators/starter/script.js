@@ -322,3 +322,4 @@ console.log(guest2);
 
 // AND SHORT CIRCUITING
 console.log(`------AND-------`);
+console.log(0 && `jonas`);
