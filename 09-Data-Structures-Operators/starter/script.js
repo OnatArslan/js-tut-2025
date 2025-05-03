@@ -62,6 +62,10 @@ Main manu index need to between (0-${this.mainMenu.length - 1})`;
   orderDelivery: function ({ starterIndex = 0, time, adress, mainIndex = 0 }) {
     console.log(time, adress, mainIndex, starterIndex);
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 // Give object as parameter is very standart thing in options field for third party librarys like passport,prisma
 restaurant.orderDelivery({
@@ -296,3 +300,11 @@ console.log(otherEls);
 // OBJECTS
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(sat, weekdays);
+
+// FUNCTIONS
+const add = function () {};
+
+add(2, 3);
+add(5, 3, 7, 2);
+
+restaurant.orderPizza(`Salmon`, `Hayday`, `Pepper`);
