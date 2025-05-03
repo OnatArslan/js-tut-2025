@@ -356,28 +356,33 @@ for (const [i, el] of exampleMenu.entries()) {
   console.log(i, el); // [3, 'Caprese Salad'] It will print like this
 }
 
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: {
+      at: 11,
+    },
+    close: {
+      at: 22,
+    },
+  },
+  sat: {
+    open: 0,
+    close: 24,
+  },
+};
+
 const restaurantGuesso = {
   name: 'Classico Guesso',
   adress: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: {
-        at: 11,
-      },
-      close: {
-        at: 22,
-      },
-    },
-    sat: {
-      open: 0,
-      close: 24,
-    },
-  },
+  // ES6 enhanced object literals
+  openingHours,
 };
+
+console.log(restaurantGuesso);
