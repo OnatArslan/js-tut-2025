@@ -342,8 +342,16 @@ console.log(rest2);
 console.log(rest1);
 
 // FOR OF LOOP -------------------------------------------------------------------------------------------------------------------
-
+// We are using for of loop for break and continue keywords in forEach method we don't have this thing
 const exampleMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const element of exampleMenu) {
+  if (element === `Pasta`) {
+    break;
+  }
   console.log(element, exampleMenu.indexOf(element));
+}
+
+// OR IF WE WANT GET INDEX AND ELEMENT AT THE SAME TIME
+for (const [i, el] of exampleMenu.entries()) {
+  console.log(i, el); // [3, 'Caprese Salad'] It will print like this
 }
