@@ -440,3 +440,6 @@ const commonFoods = italianFoods.intersection(mexicanFoods);
 console.log(commonFoods);
 
 // MAPS --------------------------------------------------------------------------------------------------------------------------------------
+const rest = new Map();
+rest.set(`name`, `Classico Itallion`);
+console.log(rest);
