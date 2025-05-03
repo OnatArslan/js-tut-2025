@@ -431,4 +431,6 @@ for (const [key, { open, close }] of Object.entries(openinHours2)) {
   );
 }
 
-// SETS ON JAVASCRIPT
+// SETS ON JAVASCRIPT (unique arrays)
+const ordersSet = new Set([1, 2, 3, 4, 5, 5, 6, 6]);
+console.log(ordersSet);
