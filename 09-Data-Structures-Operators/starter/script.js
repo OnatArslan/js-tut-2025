@@ -342,3 +342,8 @@ console.log(rest2);
 console.log(rest1);
 
 // FOR OF LOOP -------------------------------------------------------------------------------------------------------------------
+
+const exampleMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const element of exampleMenu) {
+  console.log(element, exampleMenu.indexOf(element));
+}
