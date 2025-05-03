@@ -376,13 +376,32 @@ const openingHours = {
 };
 
 const restaurantGuesso = {
-  name: 'Classico Guesso',
+  name: 'Classico Italiano',
   adress: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  // ES6 enhanced object literals
   openingHours,
+  // METHODS
+  orderFood(starterIndex, mainIndex) {
+    // This if block controls if indexes out of length that because return values are undefined
+    if (
+      this.starterMenu[starterIndex] === undefined ||
+      this.mainMenu[mainIndex] === undefined
+    ) {
+      return `Starter menu index need to between (0-${this.starterMenu.length - 1}) 
+Main manu index need to between (0-${this.mainMenu.length - 1})`;
+    }
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+  // This is ES^ object literal function syntax
+  orderDelivery({ starterIndex = 0, time, adress, mainIndex = 0 }) {
+    console.log(time, adress, mainIndex, starterIndex);
+  },
+  orderPizza(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 console.log(restaurantGuesso);
