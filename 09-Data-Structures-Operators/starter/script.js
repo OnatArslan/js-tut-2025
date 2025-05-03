@@ -409,3 +409,9 @@ console.log(restaurantGuesso);
 // OPTIONAL CHANING (?.) -------------------------------------------------------------------------------------------
 // console.log(restaurantGuesso.openingHours.mon.open); This will give an error because we are calling open property on undefined object prop
 console.log(restaurantGuesso?.openingHours?.mon?.open); // This won't give an error just return undefined
+
+const days = [`mon`, `tue`, `wed`, `thu`, `fri`, `sat`, `sun`];
+days.forEach((day, i, arr) => {
+  const openAt = restaurantGuesso?.openingHours?.[day]?.open;
+  console.log(day, openAt);
+});
