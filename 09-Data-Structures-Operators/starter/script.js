@@ -448,7 +448,7 @@ const arr4 = [1, 2, 3, 4, 5, 6, 7];
 
 console.log(arr4.slice(1, 5));
 
-// STRING METHODS -----------------------------------------------------------------------------------------
+// STRING METHODS ----------------------------------------------------------------------------------------------------------------------------
 const airline = `TAP Air Portugal`;
 const plane = `A320`;
 
@@ -461,3 +461,11 @@ console.log(airline.length); // This will print length of string
 console.log(airline.indexOf(`i`));
 
 console.log(airline.slice(airline.indexOf(`A`), airline.indexOf(`g`) + 1));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  let isMiddle = seat.includes(`B`) || seat.includes(`E`) ? true : false;
+  console.log(isMiddle);
+};
+
+checkMiddleSeat(`11E`);
