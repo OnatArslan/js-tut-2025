@@ -340,3 +340,5 @@ rest2.numGuest = rest2.numGuest ?? 0;
 rest1.numGuests ??= 10; // This syntax is shorthand for upper line line-339
 console.log(rest2);
 console.log(rest1);
+
+// FOR OF LOOP -------------------------------------------------------------------------------------------------------------------
