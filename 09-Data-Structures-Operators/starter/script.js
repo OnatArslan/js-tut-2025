@@ -481,3 +481,24 @@ const inputEmail = `    OnAt@gmAil.com    `;
 
 const fixedInput = inputEmail.trim().toLowerCase();
 console.log(fixedInput);
+
+// Replacing
+const prizeGB = `288,97$`;
+
+const prizeUS = prizeGB.replace(`$`, `&`).replace(`,`, `.`);
+console.log(prizeUS);
+
+const numberFromStr = Number.parseFloat(`2889.90`);
+console.log(numberFromStr + 2);
+
+const announcment = `All passangers come to boarding door 23. Boarding door 23!`;
+
+console.log(announcment.replace(/door/g, `gate`));
+console.log(announcment.replaceAll(`door`, `gate`));
+
+// RETURN BOOLEANS
+const plane2 = `A320neo`;
+console.log(plane2.includes(`A3`));
+console.log(plane2.endsWith(`neo`));
+console.log(plane2.startsWith(`A32`));
+console.log(plane2.search(`n`)); // It will print the starting index
