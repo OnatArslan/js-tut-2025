@@ -412,6 +412,10 @@ console.log(restaurantGuesso?.openingHours?.mon?.open); // This won't give an er
 
 const days = [`mon`, `tue`, `wed`, `thu`, `fri`, `sat`, `sun`];
 days.forEach((day, i, arr) => {
-  const openAt = restaurantGuesso?.openingHours?.[day]?.open;
+  const openAt = restaurantGuesso?.openingHours?.[day]?.open ?? 8;
   console.log(day, openAt);
 });
+
+// OPTIONAL CHANING WITH METHODS
+const newValue = restaurant.orderSmth?.(`This function is not exist`); // There is not such a function orderSmth
+console.log(newValue);
