@@ -504,3 +504,6 @@ console.log(plane2.startsWith(`A32`));
 console.log(plane2.search(`n`)); // It will print the starting index
 
 // SPLIT METHOD
+const string1 = 'a very nice string';
+const stringArr = string1.split(` `);
+console.log(stringArr);
