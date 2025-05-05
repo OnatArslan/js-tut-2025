@@ -507,3 +507,20 @@ console.log(plane2.search(`n`)); // It will print the starting index
 const string1 = 'a very nice string';
 const stringArr = string1.split(` `);
 console.log(stringArr);
+
+const modifiedString = stringArr.join(`-`);
+console.log(modifiedString);
+
+const passanger3 = `onat arslan`;
+
+const capitalizeName = function (name) {
+  const names = name.split(` `);
+  const namesUpper = [];
+  names.forEach(el => {
+    const upper = el[0].toUpperCase() + el.slice(1);
+    namesUpper.push(upper);
+  });
+  return namesUpper.join(` `);
+};
+
+console.log(capitalizeName(passanger3));
