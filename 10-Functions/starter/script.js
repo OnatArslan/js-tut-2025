@@ -54,3 +54,5 @@ const newPassport = function (person) {
 
 newPassport(onat);
 console.log(onat);
+
+// First class and higher order functions --------------------------------------------------------------------------------------------------------------------------------
