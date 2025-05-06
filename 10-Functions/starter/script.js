@@ -154,3 +154,5 @@ const eurowings = {
 };
 
 eurowings.bookFunctionForEurowings(1222322, `Onat Arslan`);
+
+// Bind methodu this keywordunu belirli bir nesneye sabitler
