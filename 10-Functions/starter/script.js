@@ -25,3 +25,25 @@ const createBooking = function (
 
 createBooking(`LH123`);
 console.log(bookings);
+
+// Passing arguments as values and referances
+const flight = `LH234`;
+const onat = {
+  name: `Onat Arslan`,
+  passport: 199900010001,
+};
+
+const checkIn = function (flightNum, passanger) {
+  flightNum = `LH999`;
+  passanger.name = `Mr. ` + passanger.name;
+
+  if (passanger.passport === 199900010001) {
+    console.log(`Check in`);
+  } else {
+    console.log(`wrong passport`);
+  }
+};
+console.log(`------------`);
+checkIn(flight, onat);
+console.log(flight);
+console.log(onat);
