@@ -108,7 +108,7 @@ const transformer = function (str, fn) {
 transformer(`Javascript is the best!`, upperFirstWord);
 transformer(`Javascript is the best!`, oneWord);
 
-// FUNCTIONS RETURNING OTHER FUNCTIONS -----------------------------------------------------------
+// FUNCTIONS RETURNING OTHER FUNCTIONS -------------------------------------------------------------------------------------------
 
 const greet2 = greeting => {
   return name => {
@@ -121,3 +121,18 @@ const innerFunct = greet2(`Welcome`);
 innerFunct(`Ahmet`);
 
 greet2(`Hi`)(`Boss`);
+
+// The call() and apply() methods ------------------------------------------------------------------------------------------
+
+const lufthansa = {
+  airline: `Lufthansa`,
+  iatecode: `LH`,
+  bookings: [],
+  book(flightNum, passangerName) {
+    console.log(
+      `${passangerName} booked a seat on ${this.airline} flight ${this.iatecode}${flightNum}`,
+    );
+  },
+};
+
+lufthansa.book(129000, `Onat Arslan`);
