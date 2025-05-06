@@ -88,7 +88,7 @@ console.log(newArr);
 // And for note here first-class functions mean that functions used like object and have own methods or assign to values
 // But higher order func means that functions that return another functions or taking functions as parameters like map() function
 
-// FUNCTIONS TAKING PARAMETER OTHER FUNCTIONS ----------------------------------------------------------------------------------------------
+// FUNCTIONS TAKING PARAMETER OTHER FUNCTIONS CALLBACK FUNCTIONS ----------------------------------------------------------------------------------------------
 
 const oneWord = function (str) {
   return str.replaceAll(` `, ``).toLowerCase();
@@ -107,3 +107,14 @@ const transformer = function (str, fn) {
 
 transformer(`Javascript is the best!`, upperFirstWord);
 transformer(`Javascript is the best!`, oneWord);
+
+// FUNCTIONS RETURNING OTHER FUNCTIONS -----------------------------------------------------------
+function greet2(greeting) {
+  return name => {
+    console.log(`${greeting} ${name}`);
+  };
+}
+
+const nameFunct = greet2(`Hey`);
+
+nameFunct(`Onat`);
