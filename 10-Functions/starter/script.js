@@ -180,3 +180,5 @@ lufthansa.buyPlane();
 document
   .querySelector(`.buy`)
   .addEventListener(`click`, lufthansa.buyPlane.bind(lufthansa)); // If we don't use bind() method on here this will refers to undefined
+
+// Immediately Function Expressions this is used for async/await blocks
