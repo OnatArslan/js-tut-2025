@@ -169,3 +169,14 @@ bookEW(1111, `Onat Arslan`);
 bookLF(2222, `Semicenk`);
 
 lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  this.planes++;
+  console.log(this);
+  console.log(this.planes);
+};
+
+lufthansa.buyPlane();
+
+document
+  .querySelector(`.buy`)
+  .addEventListener(`click`, lufthansa.buyPlane.bind(lufthansa)); // If we don't use bind() method on here this will refers to undefined
