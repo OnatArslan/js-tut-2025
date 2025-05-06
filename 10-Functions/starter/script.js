@@ -56,3 +56,31 @@ newPassport(onat);
 console.log(onat);
 
 // First class and higher order functions --------------------------------------------------------------------------------------------------------------------------------
+// Higher order function in javascript is function that take function as parameter or function that return another function
+function greet(language) {
+  if (language === 'en') {
+    return name => {
+      console.log('Hello, ' + name);
+    };
+  } else if (language === 'tr') {
+    return name => {
+      console.log('Merhaba, ' + name);
+    };
+  }
+}
+
+// This is high order functions because myMap function is taking another function as parameter
+const myMap = function (arr, funct) {
+  const result = [];
+  arr.forEach((el, i, arr) => {
+    result.push(funct(el));
+  });
+  return result;
+};
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+
+const newArr = myMap(arr, x => {
+  return x + 5;
+});
+console.log(newArr);
