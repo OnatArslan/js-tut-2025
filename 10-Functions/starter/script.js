@@ -5,6 +5,8 @@
 const bookings = [];
 
 const createBooking = function (flightNum, numPassangers, price) {
+  numPassangers = numPassangers ?? 0;
+  price = price ?? 99;
   // creating booking object with parameter data
   const booking = {
     flightNum,
