@@ -84,3 +84,6 @@ const newArr = myMap(arr, x => {
   return x + 5;
 });
 console.log(newArr);
+
+// And for note here first-class functions mean that functions used like object and have own methods or assign to values
+// But higher order func means that functions that return another functions or taking functions as parameters like map() function
