@@ -47,3 +47,10 @@ console.log(`------------`);
 checkIn(flight, onat);
 console.log(flight);
 console.log(onat);
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 10000000);
+};
+
+newPassport(onat);
+console.log(onat);
