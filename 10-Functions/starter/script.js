@@ -156,3 +156,16 @@ const eurowings = {
 eurowings.bookFunctionForEurowings(1222322, `Onat Arslan`);
 
 // Bind methodu this keywordunu belirli bir nesneye sabitler
+
+const book = function (flightNum, passName) {
+  console.log(
+    `${passName} booked a seat on ${this.airline} flight ${this.iatecode}${flightNum}`,
+  );
+};
+
+const bookEW = book.bind(eurowings);
+const bookLF = book.bind(lufthansa); // This bind() method used for this keyword for specified object
+bookEW(1111, `Onat Arslan`);
+bookLF(2222, `Semicenk`);
+
+lufthansa.planes = 300;
