@@ -109,12 +109,15 @@ transformer(`Javascript is the best!`, upperFirstWord);
 transformer(`Javascript is the best!`, oneWord);
 
 // FUNCTIONS RETURNING OTHER FUNCTIONS -----------------------------------------------------------
-function greet2(greeting) {
+
+const greet2 = greeting => {
   return name => {
     console.log(`${greeting} ${name}`);
   };
-}
+};
 
-const nameFunct = greet2(`Hey`);
+const innerFunct = greet2(`Welcome`);
 
-nameFunct(`Onat`);
+innerFunct(`Ahmet`);
+
+greet2(`Hi`)(`Boss`);
