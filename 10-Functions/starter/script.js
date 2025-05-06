@@ -143,3 +143,14 @@ lufthansa.book(129000, `Onat Arslan`);
 lufthansa.book(190000, `John Smith`);
 
 console.log(lufthansa.bookings);
+
+const eurowings = {
+  airline: `Eurowings`,
+  iatecode: `EW`,
+  bookings: [],
+  bookFunctionForEurowings(flightNum, passangerName) {
+    return lufthansa.book.call(this, flightNum, passangerName);
+  },
+};
+
+eurowings.bookFunctionForEurowings(1222322, `Onat Arslan`);
