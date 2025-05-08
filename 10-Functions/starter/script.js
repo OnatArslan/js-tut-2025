@@ -197,3 +197,5 @@ document
 (async () => {
   console.log(`Hit and never come back but async!`);
 })();
+
+console.log(`Hello world`);
