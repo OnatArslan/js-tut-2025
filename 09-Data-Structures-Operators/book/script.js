@@ -5,3 +5,4 @@ console.log(`hello world`);
 console.log(`do not disturb`);
 console.log(`20 20 20`);
 console.log(`hello`);
+console.log(`literal`);
