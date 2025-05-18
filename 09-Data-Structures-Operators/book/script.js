@@ -6,3 +6,4 @@ console.log(`do not disturb`);
 console.log(`20 20 20`);
 console.log(`hello`);
 console.log(`literal`);
+console.log(`literal`);
