@@ -321,5 +321,5 @@ class App {
     location.reload();
   }
 }
-
+console.log("2000-40-40");
 const app = new App();
