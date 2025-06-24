@@ -331,4 +331,4 @@ console.log('Jamaika');
 
 console.log(`hello world`);
 
-console.log('Porto rıco');
+console.log('Porto rico');
