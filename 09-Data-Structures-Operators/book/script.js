@@ -14,3 +14,5 @@ console.log(`hi world`);
 console.log(`hello world`);
 console.log(`hello world here`);
 console.log(`hello world`);
+console.log(`${hello}`);
+console.log(`hello world`);
