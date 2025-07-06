@@ -206,3 +206,5 @@ console.log(`hello world`);
 console.log(`hello world`);
 console.log(`hello world`);
 console.log(`test done✅`);
+console.log(`all tests are done`);
+console.log(`hello world`);
