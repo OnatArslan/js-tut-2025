@@ -328,11 +328,3 @@ class App {
 const app = new App();
 
 console.log(`(hello world)`);
-<<<<<<< HEAD
-
-// After 24 all things need to cleanup and server performance need to arange for high performance (1000 in min)
-=======
-console.log(`hello world`);
-console.log(`hello world`);
-console.log(`hello world`);
->>>>>>> c8c1536b674844a93e148788e1b22514333aa241
