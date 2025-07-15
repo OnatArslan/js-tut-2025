@@ -178,3 +178,52 @@ const {
 } = restaurant2.openingHours;
 console.log(friOpen, friClose);
 console.log(friday);
+
+// USING DESTRUCTURING IN METHOD PARAMETER PASSING !!!!!!!!!!!!!!!!!!!!!!!
+const restaurant3 = {
+  restaurantName: 'Classico Italiano',
+  // ownerName: `Onat Arslan`,
+  loc: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  // Object datas
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+  // Methods
+  orderFood(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  // EXAMPLE METHOD FOR PARAMETER PASSING (This is standart for 3rd party javascript libaries like express, prisma, zod)
+  infoAboutPlugAndOthers(
+    time = `Unknown`,
+    adress = `Unknown`,
+    { name: plugName, surname: plugSurname, age: plugAge, job: plugJob },
+  ) {
+    console.log(
+      `Your delivery will be delivered to ${adress} at ${time} and your plug name is ${plugName} age is ${plugAge} job is ${plugJob} and surname is ${plugSurname}`,
+    );
+  },
+};
+
+// This syntax here is used in settings object in 3rd party libaries
+const plugObj = {
+  name: `Onat`,
+  surname: `Arslan`,
+  age: 22,
+  job: `Backend Developer`,
+};
+restaurant3.infoAboutPlugAndOthers(11, `Floride`, plugObj);
