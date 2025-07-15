@@ -106,6 +106,7 @@ console.log(firstEx, secondEx, thirdEx, fourthEx); // --> 1 2 3 'default'
 
 const restaurant2 = {
   restaurantName: 'Classico Italiano',
+  // ownerName: `Onat Arslan`,
   loc: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
@@ -151,8 +152,29 @@ console.log(thu);
 const {
   restaurantName: aliasForName,
   loc: aliasForLoc,
-  categories: aliasForCategories,
+  categories: aliasForCategories = [], // If categories does not exist then default value for this is empty array --> []
   starterMenu: aliasForStarterMenu,
+
+  // Giving default values in object destructuring
+  ownerName: ownerName = 'Anonymous',
 } = restaurant2;
 
 console.log(aliasForStarterMenu);
+console.log(ownerName);
+
+// Mutating variables
+let exNumber = 111;
+let exNumber2 = 999;
+
+const obj = { exNumber: 23, exNumber2: 7, exNumber3: 24 };
+// In this example we mutate original values of exNumber and exNumber2
+({ exNumber, exNumber2 } = obj);
+console.log(exNumber, exNumber2); // --> 23 7
+
+const {
+  // In this example we write both default value usage and nested object destructuring
+  fri: { open: friOpen = 0, close: friClose },
+  fri: friday,
+} = restaurant2.openingHours;
+console.log(friOpen, friClose);
+console.log(friday);
