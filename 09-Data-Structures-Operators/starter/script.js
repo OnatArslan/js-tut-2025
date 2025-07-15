@@ -45,3 +45,5 @@ const restaurant = {
     },
   },
 };
+
+console.log(`starting at 15-07-2025`);
