@@ -146,3 +146,13 @@ console.log(loc);
 console.log(restaurantName);
 console.log(openingHours);
 console.log(thu);
+
+// In this example we are using alias in destructuring objects
+const {
+  restaurantName: aliasForName,
+  loc: aliasForLoc,
+  categories: aliasForCategories,
+  starterMenu: aliasForStarterMenu,
+} = restaurant2;
+
+console.log(aliasForStarterMenu);
