@@ -1,5 +1,7 @@
 'use strict';
 
+// In all code examples '-->' sign will explain console.log() text
+
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -89,3 +91,13 @@ const nestedArr = [
 
 const [firstVal, , [nestedFirstVal, nestedSecondVal]] = nestedArr;
 console.log(firstVal, nestedFirstVal, nestedSecondVal);
+
+// Default values
+const exArray = [1, 2, 3];
+
+// const [firstEx, secondEx, thirdEx, fourthEx] = exArray; In this code fourthEx will return undefined because we dont have any data for this variable
+
+// In below sample we will use default variable
+const [firstEx, secondEx, thirdEx, fourthEx = `default`] = exArray;
+
+console.log(firstEx, secondEx, thirdEx, fourthEx); // --> 1 2 3 'default'
