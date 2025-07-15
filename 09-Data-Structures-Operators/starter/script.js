@@ -27,8 +27,8 @@ const mexicanFoods = new Set([
 // --------------------------------------------------------------------------------------------------- FIRST PART --------------------------------------------------------------------
 // Data needed for first part of the section
 const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  restaurantName: 'Classico Italiano',
+  loc: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
@@ -101,3 +101,48 @@ const exArray = [1, 2, 3];
 const [firstEx, secondEx, thirdEx, fourthEx = `default`] = exArray;
 
 console.log(firstEx, secondEx, thirdEx, fourthEx); // --> 1 2 3 'default'
+
+// DESTRUCTURING OBJECTS ------------------------------
+
+const restaurant2 = {
+  restaurantName: 'Classico Italiano',
+  loc: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  // Object datas
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+  // Methods
+  orderFood(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+};
+
+// This is basic destructuring
+const {
+  restaurantName,
+  loc,
+  categories,
+  starterMenu,
+  mainMenu,
+  openingHours, // In here we get the all openingHours object
+  openingHours: { thu, fri, sat }, // But here we are taking child objects(thu, fri, sat)
+} = restaurant2;
+
+console.log(loc);
+console.log(restaurantName);
+console.log(openingHours);
+console.log(thu);
