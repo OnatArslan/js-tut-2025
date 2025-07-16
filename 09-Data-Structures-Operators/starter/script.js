@@ -465,3 +465,42 @@ console.log(restaurant.openingHours.mon?.open?.rightKnow); // ==> /. solve our e
 for (const [key, value] of Object.entries(restaurant)) {
   console.log(`Key : ${key}\nValue : ${value}`);
 }
+
+// SETS -----------------------------------------------------------------------------------------------------
+// Set values are unique
+const ordersSet = new Set([1, 2, 3, 4, 4]);
+const nameSet = new Set(`Onat`);
+console.log(ordersSet);
+console.log(nameSet);
+
+// get size of a set --same as arr.length
+console.log(nameSet.size);
+
+// Check items inside set
+console.log(nameSet.has(`O`));
+
+// add items into set
+nameSet.add(`K`);
+console.log(nameSet);
+
+// delete items from set
+nameSet.delete(`a`);
+console.log(nameSet);
+
+// clear() will delete all elements inside set
+nameSet.clear();
+console.log(nameSet);
+
+// Real world usage of Set is getting unique values in array
+const arrayNotUnique = [
+  `Chef`,
+  `Waiter`,
+  `Chef`,
+  `Manager`,
+  `Waiter`,
+  `Manager`,
+];
+
+// We get the unique values with Set convertion and use spread operator for creating new array with unique values
+const uniqueArray = [...new Set(arrayNotUnique)];
+console.log(uniqueArray);
