@@ -244,3 +244,82 @@ const mainMenuCopy = [...restaurant.mainMenu];
 // Join 2 arrays
 const totalMenu = [...restaurant3.mainMenu, ...restaurant3.starterMenu];
 console.log(totalMenu);
+
+// Iterables: arrays, strings, maps, sets
+// We can use spread operator(...) on all iterables
+const exString = `Onat Arslan`;
+console.log(exString);
+console.log(...exString);
+
+// exString.split(``).forEach((el, i, arr) => {
+//   console.log(
+//     `Element ${el} belongs to index ${i} and total array is [${arr}]`,
+//   );
+// });
+
+const restaurant4 = {
+  restaurantName: 'Classico Italiano',
+  // ownerName: `Onat Arslan`,
+  loc: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  // Object datas
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+  // Methods
+  orderFood(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  // EXAMPLE METHOD FOR PARAMETER PASSING (This is standart for 3rd party javascript libaries like express, prisma, zod)
+  infoAboutPlugAndOthers(
+    time = `Unknown`,
+    adress = `Unknown`,
+    { name: plugName, surname: plugSurname, age: plugAge, job: plugJob },
+  ) {
+    console.log(
+      `Your delivery will be delivered to ${adress} at ${time} and your plug name is ${plugName} age is ${plugAge} job is ${plugJob} and surname is ${plugSurname}`,
+    );
+  },
+
+  /**
+   *
+   */
+  orderPasta(ing1, ing2, ing3) {
+    console.log(ing1, ing2, ing3);
+  },
+};
+
+const ingreadients = [`Olive`, `Peach`, `Zong`];
+
+restaurant4.orderPasta(...ingreadients);
+
+// Creating new object with old data from another object
+const newRestaurant = {
+  ...restaurant4, // This spread usege for get all data from restaurant4 object
+  info: `This is a copy restourant`,
+  foundedIn: 2002,
+};
+
+console.log(newRestaurant);
+
+// Copy object with spread op. (same as new object) shallow copy!!!!!
+const copyRestaurant = { ...newRestaurant };
+
+copyRestaurant.foundedIn = 1980;
+
+console.log(copyRestaurant);
+console.log(newRestaurant);
