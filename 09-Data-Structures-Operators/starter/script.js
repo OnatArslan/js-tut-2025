@@ -513,3 +513,11 @@ console.log(commonFoods);
 
 const unionOfTwoSet = [...italianFoods.union(mexicanFoods)];
 console.log(unionOfTwoSet);
+
+// MAPS -----------------------------------------------------------------------------------------------------
+const rest = new Map();
+rest.set(`name`, `Classico Italiano`);
+rest.set(1, `Firenze,Italy`);
+rest.set(2, `Lisbon,Portugal`);
+
+rest.set(`categories`, `Organic`);
