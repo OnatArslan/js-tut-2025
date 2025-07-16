@@ -567,3 +567,5 @@ function checkMails(dbEmail, inputEmail) {
 }
 
 checkMails(email, inputEmail);
+
+// SPLIT METHOD FOR STRINGS (MOST IMPORTANT ONES)
