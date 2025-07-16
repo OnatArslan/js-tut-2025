@@ -400,3 +400,17 @@ console.log(rest2.numGuess);
 // ?? is nullish operator (only false for null or undefined)
 rest2.numGuess ??= 5;
 console.log(rest2.numGuess);
+
+// FOR OF LOOP
+// for of loop with arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+
+for (const element of menu) {
+  console.log(element);
+}
+
+for (const [index, element] of menu.entries()) {
+  console.log(`Element ${element} at index : ${index}`);
+}
+
+// Enhanced Object Literals
