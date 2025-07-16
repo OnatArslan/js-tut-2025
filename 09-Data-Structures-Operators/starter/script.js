@@ -450,3 +450,13 @@ const restaurant6 = {
 };
 
 console.log(restaurant6);
+
+// Optional chaning (?.)
+
+console.log(restaurant.openingHours.mon); // ==> undefined
+
+// But if we try access prop on mon object we ll get an error
+// console.log(restaurant.openingHours.mon.open);  ==> Cannot read properties of undefined (reading 'open')
+
+// In this case we can use ?.
+console.log(restaurant.openingHours.mon?.open?.rightKnow); // ==> /. solve our error problem instead of giving an error it is logging undefined
