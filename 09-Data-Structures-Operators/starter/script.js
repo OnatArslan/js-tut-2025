@@ -357,4 +357,16 @@ console.log(add(2, 5));
 console.log(add(2, 5, 4, 11, 23, 333, 45));
 
 add(2, 5, 0, 12, 23, 12, 78);
-console.log(`hello world`);
+
+// SHORT CIRCUITING
+
+// || operator will return first truthy value
+console.log(0 || `` || `hello` || 14); // ==> hello
+
+// && operator will return first falsy value
+console.log(`Onat` && 12 && null); // ==> null
+
+// In real world scenarios if we dont know data is valid, we can use || for giving default values
+
+restaurant.numGuess = restaurant.numGuess || 0; // If there is not specified data then default value is 0
+console.log(restaurant.numGuess); // ==> 0
