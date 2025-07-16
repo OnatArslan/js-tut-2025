@@ -230,5 +230,5 @@ restaurant3.infoAboutPlugAndOthers(11, `Floride`, plugObj);
 
 // Spread operator (...) used for unpacking elements in array
 const arrF = [7, 8, 9];
-const badNewArr = [1, 2, ...arrF];
+const badNewArr = [1, 2, ...arrF]; // ...arrF will spread the array elements like 7, 8, 9
 console.log(badNewArr);
