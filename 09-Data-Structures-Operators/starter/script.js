@@ -544,7 +544,7 @@ console.log(
   airline.slice(airline.lastIndexOf(` `) + 1, airline.lastIndexOf(`l`) + 1),
 );
 
-// Real usecase of split() method
+// Real usecase of split() method  ------------------- -------------------- -------------------- -------------------- ------------------- ---------------------
 const line = `1,onat,backend`;
 
 const [id, name, dept] = line.split(`,`);
@@ -568,4 +568,105 @@ function checkMails(dbEmail, inputEmail) {
 
 checkMails(email, inputEmail);
 
-// SPLIT METHOD FOR STRINGS (MOST IMPORTANT ONES)
+// SPLIT METHOD FOR STRINGS (MOST IMPORTANT ONES)  ------------------- -------------------- -------------------- -------------------- ------------------- ---------------------
+
+console.log(
+  `a + very + nice + and + messy + string`.split(` + `).join(` `) + `.`,
+);
+
+const fullname = `Onat Arslan`;
+const [nameOfMe, last] = fullname.split(` `);
+console.log(nameOfMe);
+
+function capitalizeName(name) {
+  const fixedName = name
+    .toLowerCase()
+    .split(` `) // conver string to array
+    .map(name => {
+      return name[0].toUpperCase() + name.slice(1);
+    })
+    .join(` `);
+  console.log(fixedName);
+}
+
+const passanger = `Jessica ann smith davis`;
+
+capitalizeName(`onat arslan`);
+
+// Padding ------------------- -------------------- -------------------- -------------------- ------------------- ---------------------
+const message = `Go to gate 23!`;
+
+console.log(message.padStart(30, `-`));
+
+// 1111 1111 1111 2312
+function maskCreditCard(number) {
+  const str = (number + ``).slice(-4).padStart(16, `*`);
+  console.log(str);
+}
+
+maskCreditCard(1111111111112312);
+
+// onatars@gmail.com ==> o****s@*m****.com
+
+function maskEmail(openEmail) {
+  const [openPriv, other] = openEmail.split(`@`);
+  const [domain] = other.split(`.`);
+
+  const privLenght = openPriv.length;
+  const domainLenght = domain.length;
+  const maskedMail = `${openPriv.slice(0, 2).padEnd(privLenght, `*`)}@*${domain[1].padEnd(domainLenght - 1, `*`)}.com`;
+  console.log(maskedMail);
+  console.log(domain);
+  return maskedMail;
+}
+
+maskEmail(`onatars@gmail.com`);
+
+const emails = [
+  'alex99@gmail.com',
+  'maria_roberts@protonmail.com',
+  'john.doe1987@yahoo.com',
+  'coding_master@outlook.com',
+  'dev.karen@icloud.com',
+  'speedx77@aol.com',
+  'michael_s@tutanota.com',
+  'elena.codes@pm.me',
+  'xavier.alpha@live.com',
+  'luna.night@fastmail.com',
+  'noah_dev@zohomail.com',
+  'emma.spark@hey.com',
+  'rocket_fred@inbox.lv',
+  'tim.thebuilder@seznam.cz',
+  'catlover91@163.com',
+  'ai_robotic@mail.com',
+  'wizard.brain@t-online.de',
+  'diana.jane@hushmail.com',
+  'pixel.crazy@iname.com',
+  'jamie_tech@duck.com',
+  'valentina.d@naver.com',
+  'li.mei@rediffmail.com',
+  'andre.b@protonmail.ch',
+  'nina_design@zoho.eu',
+  'viktor.code@protonmail.ru',
+  'kathy_dev@tuta.io',
+  'kevin.silicon@icloud.com',
+  'el.capitan@prodigy.net',
+  'steve4real@mac.com',
+  'datahunter@laposte.net',
+  'tiny_pixel@gmx.net',
+  'nerdzone84@live.co.uk',
+  'yuki.akita@ezweb.ne.jp',
+  'zebra.print@posteo.net',
+  'hugo_alpha@me.com',
+  'franz.backup@gmx.de',
+  'the.dark@pm.me',
+  'ghost.protocol@openmailbox.org',
+  'mystic_rose@trashmail.com',
+  'reboot.time@proton.me',
+];
+
+const maskedEmails = emails.map(email => {
+  return maskEmail(email);
+});
+
+console.log(...maskedEmails);
