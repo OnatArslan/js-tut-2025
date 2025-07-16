@@ -324,4 +324,36 @@ copyRestaurant.foundedIn = 1980;
 console.log(copyRestaurant);
 console.log(newRestaurant);
 
-// REST PATTERN AND PARAMTERES
+// REST PATTERN AND PARAMETERS
+// Rest pattern is getting rest of the elements
+// SPREAD IS RIGHT SIDE
+const arr9 = [1, 2, ...[3, 4, 5]];
+
+// REST PATTERN EXAMPLE
+const [a1, a2, ...others] = arr9;
+console.log(a1, a2, others);
+
+// Using spread operator and rest pattern at the same time
+// Rest element must be the last element!!!!
+const [firstMain, , thirdMain, ...otherFood] = [
+  ...restaurant3.mainMenu,
+  ...restaurant3.starterMenu,
+];
+
+console.log(firstMain, thirdMain, otherFood);
+
+const { sat: satur, ...otherDaysObj } = restaurant.openingHours;
+console.log(otherDaysObj);
+console.log(satur);
+
+// Functions
+function add(...numbers) {
+  return numbers.reduce((acc, val, i, arr) => {
+    return acc + val;
+  }, 0);
+}
+
+console.log(add(2, 5));
+console.log(add(2, 5, 4, 11, 23, 333, 45));
+
+add(2, 5, 0, 12, 23, 12, 78);
