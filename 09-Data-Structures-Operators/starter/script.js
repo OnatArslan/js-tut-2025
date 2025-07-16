@@ -414,3 +414,39 @@ for (const [index, element] of menu.entries()) {
 }
 
 // Enhanced Object Literals
+const openingHourss = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
+const restaurant6 = {
+  restaurantName: 'Classico Italiano',
+  // ownerName: `Onat Arslan`,
+  loc: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  // Enhanced object literal is if we want to give object inside
+  openingHourss, // This code is ok.Do not need to write openingHourss : openingHourss
+
+  // Enhanced method literal
+  doSmth() {
+    console.log(`Doing smth`);
+  },
+  gender: `male`,
+  // Enhanced propname literal
+  [2 === 2 ? `Mr` : `Mrs`]: `Sena`,
+};
+
+console.log(restaurant6);
