@@ -379,3 +379,24 @@ console.log(restaurant.numGuess);
 // If object have field then do this
 
 restaurant.categories && console.log(categories); // If there is property named categories then log categories like if expression
+
+// LOGICAL ASSIGMENT OPERATORS
+const rest1 = {
+  resName: `Capri`,
+  numGuess: 20,
+};
+
+const rest2 = {
+  resName: `Piezza`,
+  owner: `Onat Arslan`,
+};
+
+// This is nullish op
+rest2.numGuess = rest2.numGuess ?? 10;
+console.log(rest2.numGuess);
+
+// This is logical assigment operator with ??=
+// All of them are ??= ||= &&=
+// ?? is nullish operator (only false for null or undefined)
+rest2.numGuess ??= 5;
+console.log(rest2.numGuess);
