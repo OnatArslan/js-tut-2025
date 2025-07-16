@@ -460,3 +460,8 @@ console.log(restaurant.openingHours.mon); // ==> undefined
 
 // In this case we can use ?.
 console.log(restaurant.openingHours.mon?.open?.rightKnow); // ==> /. solve our error problem instead of giving an error it is logging undefined
+
+// LOOPING OBJECTS
+for (const [key, value] of Object.entries(restaurant)) {
+  console.log(`Key : ${key}\nValue : ${value}`);
+}
