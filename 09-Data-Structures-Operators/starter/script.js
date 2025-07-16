@@ -323,3 +323,5 @@ copyRestaurant.foundedIn = 1980;
 
 console.log(copyRestaurant);
 console.log(newRestaurant);
+
+// REST PATTERN AND PARAMTERES
