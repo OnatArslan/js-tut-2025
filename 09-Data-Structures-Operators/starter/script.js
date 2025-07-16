@@ -367,6 +367,15 @@ console.log(0 || `` || `hello` || 14); // ==> hello
 console.log(`Onat` && 12 && null); // ==> null
 
 // In real world scenarios if we dont know data is valid, we can use || for giving default values
+restaurant.numGuess = 0;
+restaurant.numGuess = restaurant.numGuess || 10; // If there is not specified data then default value is 0
+console.log(restaurant.numGuess); // ==> 10
 
-restaurant.numGuess = restaurant.numGuess || 0; // If there is not specified data then default value is 0
-console.log(restaurant.numGuess); // ==> 0
+// But in this sceniario what if numGuess is 0, because 0 is number but falsy value
+restaurant.numGuess = 0;
+restaurant.numGuess = restaurant.numGuess ?? 10;
+console.log(restaurant.numGuess);
+
+// If object have field then do this
+
+restaurant.categories && console.log(categories); // If there is property named categories then log categories like if expression
