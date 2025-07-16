@@ -3,8 +3,6 @@
 // In all code examples '-->' sign will explain console.log() text
 
 // Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // --------------------------------------------------------------------------------------------------- FIRST PART --------------------------------------------------------------------
 // Data needed for first part of the section
@@ -521,3 +519,36 @@ rest.set(1, `Firenze,Italy`);
 rest.set(2, `Lisbon,Portugal`);
 
 rest.set(`categories`, `Organic`);
+
+// STRINGS ------------------------------------------------------------------------------------------------------------------------------------------------------------
+const airline = `TAP Air Portugal`;
+const plane = `A320`;
+
+// indexing
+console.log(plane[0]);
+
+// getting length
+console.log(plane.length);
+
+// getting start index of particular element (if not found it will return -1)
+console.log(plane.indexOf(`3`));
+
+// getting last occurrances index of particular element (if not found it will return -1)
+console.log(airline.lastIndexOf(`a`));
+
+// Checking if string starts with this el
+console.log(plane.startsWith(`C`));
+
+// Slicing strings
+console.log(
+  airline.slice(airline.lastIndexOf(` `) + 1, airline.lastIndexOf(`l`) + 1),
+);
+
+// Real usecase of split() method
+const line = `1,onat,backend`;
+
+const [id, name, dept] = line.split(`,`);
+console.log(id, `\t`, name, `\t`, dept);
+
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
