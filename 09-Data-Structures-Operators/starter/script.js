@@ -230,5 +230,17 @@ restaurant3.infoAboutPlugAndOthers(11, `Floride`, plugObj);
 
 // Spread operator (...) used for unpacking elements in array
 const arrF = [7, 8, 9];
-const badNewArr = [1, 2, ...arrF]; // ...arrF will spread the array elements like 7, 8, 9
-console.log(badNewArr);
+const newArr = [1, 2, ...arrF]; // ...arrF will spread the array elements like 7, 8, 9
+
+console.log(newArr); // => [1, 2, 7, 8, 9]
+console.log(...newArr); // => 1 2 7 8 9 unpacked
+
+const newMenu = [...restaurant3.mainMenu, `Gnocci`, `Kebap`];
+console.log(newMenu);
+
+// Shallow copies of arrays
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const totalMenu = [...restaurant3.mainMenu, ...restaurant3.starterMenu];
+console.log(totalMenu);
