@@ -6,24 +6,6 @@
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-const italianFoods = new Set([
-  'pasta',
-  'gnocchi',
-  'tomatoes',
-  'olive oil',
-  'garlic',
-  'basil',
-]);
-
-const mexicanFoods = new Set([
-  'tortillas',
-  'beans',
-  'rice',
-  'tomatoes',
-  'avocado',
-  'garlic',
-]);
-
 // --------------------------------------------------------------------------------------------------- FIRST PART --------------------------------------------------------------------
 // Data needed for first part of the section
 const restaurant = {
@@ -504,3 +486,30 @@ const arrayNotUnique = [
 // We get the unique values with Set convertion and use spread operator for creating new array with unique values
 const uniqueArray = [...new Set(arrayNotUnique)];
 console.log(uniqueArray);
+
+// NEW ES6 SET METHODS FOR MAKE SETS USEFUL
+const italianFoods = new Set([
+  'pasta',
+  'gnocchi',
+  'tomatoes',
+  'olive oil',
+  'garlic',
+  'basil',
+]);
+
+const mexicanFoods = new Set([
+  'tortillas',
+  'beans',
+  'rice',
+  'tomatoes',
+  'avocado',
+  'garlic',
+]);
+
+console.log(italianFoods.intersection(mexicanFoods));
+
+const commonFoods = [...italianFoods.intersection(mexicanFoods)];
+console.log(commonFoods);
+
+const unionOfTwoSet = [...italianFoods.union(mexicanFoods)];
+console.log(unionOfTwoSet);
