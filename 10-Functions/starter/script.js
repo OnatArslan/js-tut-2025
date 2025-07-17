@@ -2,15 +2,19 @@
 
 const bookings = [];
 
-// In here we are giving default parameters
-function createBooking(flightNum = 1111, numPassengers = 1, price = 100) {
+// In here we are giving default values to parameters
+function createBooking(
+  flightNum = 1111,
+  numPassengers,
+  totalWorth = numPassengers * 199, // Also we can use other parameters in parameters
+) {
   const booking = {
     flightNum,
     numPassengers,
-    price,
+    totalWorth,
   };
   console.log(booking);
   bookings.push(booking);
 }
 
-createBooking();
+createBooking(23, 12);
