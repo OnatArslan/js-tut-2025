@@ -70,3 +70,19 @@ function tranformer(str, fn) {
 }
 tranformer(`Javascript is the best`, upperFirstWord); // In this usage upperFirstWord function is callback and transformer is higher order function
 tranformer(`Javascript is the best`, oneWord); // In this usage oneWord function is callback and transformer is higher order function
+// Js also uses callback functions
+
+// function greet(greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// }
+
+const greet = greeting => name => console.log(`${greeting} ${name}`); // greet fonksiyonu name fonksiyonunu donduruyor
+
+const returnedFunction = greet(`Hey`); // This greet function returns another funtion
+
+returnedFunction(`Onat`); // ==> Hey Onat
+returnedFunction(`Jons`); // ==> Hey Jons
+
+greet(`Hi`)(`Mel`); // Looks weird but very effective
