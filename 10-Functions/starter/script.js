@@ -86,3 +86,5 @@ returnedFunction(`Onat`); // ==> Hey Onat
 returnedFunction(`Jons`); // ==> Hey Jons
 
 greet(`Hi`)(`Mel`); // Looks weird but very effective
+
+// CALL and APPLY METHODS --------- ---------- ----------- ----------- ------------ ----------- ------------ ------------ ------------ -------------- -------------
