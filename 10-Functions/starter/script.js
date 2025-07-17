@@ -129,3 +129,4 @@ book2(999, `Sedat Peker`);
 // call() method will call function with this arg of given object
 
 // Do not use apply method just use call() and bind() methods
+console.log(`hello world`);
