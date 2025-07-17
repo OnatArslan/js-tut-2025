@@ -48,3 +48,25 @@ function newPassport(person) {
 
 newPassport(onat);
 checkIn(flight, onat);
+
+// FIRST-CLASS(this means functions treatet like values) AND HIGHER-ORDER FUNCTIONS(functions calls other functions OR functions returns another function)
+
+function oneWord(str) {
+  return str.replaceAll(` `, ``).toLowerCase();
+}
+
+// CALLBACK FUNCTION
+function upperFirstWord(str) {
+  const [first, ...others] = str.split(` `);
+  const returnStr = [first.toUpperCase(), others.join(` `)].join(` `);
+  return returnStr;
+}
+
+// HIGHER ORDER FUNCTION
+function tranformer(str, fn) {
+  console.log(
+    `Transformed string is '${fn(str)}' and transformed by ${fn.name} function`,
+  );
+}
+tranformer(`Javascript is the best`, upperFirstWord); // In this usage upperFirstWord function is callback and transformer is higher order function
+tranformer(`Javascript is the best`, oneWord); // In this usage oneWord function is callback and transformer is higher order function
