@@ -87,4 +87,45 @@ returnedFunction(`Jons`); // ==> Hey Jons
 
 greet(`Hi`)(`Mel`); // Looks weird but very effective
 
-// CALL and APPLY METHODS --------- ---------- ----------- ----------- ------------ ----------- ------------ ------------ ------------ -------------- -------------
+// CALL and BIND METHODS --------- ---------- ----------- ----------- ------------ ----------- ------------ ------------ ------------ -------------- -------------
+const lufthansa = {
+  airline: `Lufthansa`,
+  iataCode: `LH`,
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`,
+    );
+    this.bookings.push({ fligth: `${this.iataCode}${flightNum}`, name });
+  },
+};
+
+lufthansa.book(239, `Onat Arslan`);
+lufthansa.book(111, `Ohio Olake`);
+
+const eurowings = {
+  airline: `Eurowings`,
+  iataCode: `EW`,
+  bookings: [],
+};
+
+const turkish = {
+  airline: `Turkish Airlines`,
+  iataCode: `THY`,
+  bookings: [],
+};
+
+const book = lufthansa.book;
+book.call(eurowings, 1453, `James Bond`); // we call book function with this arg of eurowings object call means that
+
+// We need to use bind method to connect this keyword to turkish object
+const book2 = lufthansa.book.bind(turkish); // In normal lufthansa.book function take lufthansa object as this
+
+book2(999, `Sedat Peker`);
+
+// In quick summary bind method returns new function with atteched this arg with given obj
+// But bind() method also used for give default values to arguments
+
+// call() method will call function with this arg of given object
+
+// Do not use apply method just use call() and bind() methods
