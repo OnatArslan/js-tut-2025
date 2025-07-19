@@ -194,5 +194,16 @@ incrementPassanger();
 incrementPassanger();
 incrementPassanger();
 
+console.dir(incrementPassanger); // With this line we can see closures in our functions
+
 incrementPassanger = null; // With this line we destroy the incrementPassanger function and Garbage Collector will delete it
 console.log(incrementPassanger); // ==> null
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+  document.querySelector(`body`).addEventListener(`click`, ev => {
+    console.log(ev);
+    header.style.color = `blue`;
+  });
+})();
