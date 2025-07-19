@@ -136,5 +136,11 @@ const amiri = {
 };
 
 const bookARA = book.bind(amiri); // bind method connect this to amiri obj
-
+const bookLH = book.bind(lufthansa);
 bookARA(2911, `Eshref`);
+bookLH(1123, `Jonas`);
+
+// Partial Function Application
+const bookARA1000 = book.bind(amiri, 1000); // we give a parameter for book function
+
+bookARA1000(`Steven`);
