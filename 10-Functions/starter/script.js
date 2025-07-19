@@ -144,3 +144,28 @@ bookLH(1123, `Jonas`);
 const bookARA1000 = book.bind(amiri, 1000); // we give a parameter for book function
 
 bookARA1000(`Steven`);
+
+// With Event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector(`.buy`)
+  .addEventListener(`click`, lufthansa.buyPlane.bind(lufthansa)); // If we dont use bind method this keyword will be point to button element
+
+// Clear example of Partial Aplication
+function addTax(taxRate, value) {
+  return value + value * taxRate;
+}
+
+// In this case think about USA and Turkey have diffrent tax rates then we can do this with bind() method
+
+const addTaxUsa = addTax.bind(null, 0.3); // We set parameter 0.3 for this function this is Partial Application
+const addTaxTr = addTax.bind(null, 0.4);
+
+console.log(addTaxUsa(1000));
+console.log(addTaxTr(1000));
