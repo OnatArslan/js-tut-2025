@@ -169,3 +169,30 @@ const addTaxTr = addTax.bind(null, 0.4);
 
 console.log(addTaxUsa(1000));
 console.log(addTaxTr(1000));
+
+// Immediately Invoked Function (function than run once)
+
+(function () {
+  console.log(`hello world`);
+})();
+
+// CLOSURES --------------------------_________________------------------------________________________------------------________________________----------------------
+function secureBooking() {
+  let passangerCount = 0;
+
+  return function () {
+    // Inner function remember where it born because of this reason it can reach passangerCount outside the function
+    passangerCount++;
+    console.log(passangerCount);
+  };
+}
+
+let incrementPassanger = secureBooking(); // with this line secureBooking() functions is done but increment Passanger
+
+incrementPassanger(); // Inner function is reaching outer functions scope variables outside of the function this is closures
+incrementPassanger();
+incrementPassanger();
+incrementPassanger();
+
+incrementPassanger = null; // With this line we destroy the incrementPassanger function and Garbage Collector will delete it
+console.log(incrementPassanger); // ==> null
