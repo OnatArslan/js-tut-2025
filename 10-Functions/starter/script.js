@@ -129,4 +129,12 @@ book2(999, `Sedat Peker`);
 // call() method will call function with this arg of given object
 
 // Do not use apply method just use call() and bind() methods
-console.log(`hello world`);
+const amiri = {
+  airline: `Arabic Airlines`,
+  iataCode: `ARA`,
+  bookings: [],
+};
+
+const bookARA = book.bind(amiri); // bind method connect this to amiri obj
+
+bookARA(2911, `Eshref`);
