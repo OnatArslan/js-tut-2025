@@ -74,3 +74,13 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+const array = [`a`, `b`, `c`, `d`, `e`];
+
+// slice method
+console.log(array.slice(2, 4));
+console.log(array.slice(-1)); // this is last element of array
+
+// splice method
+console.log(array.splice(2, 4)); // this is mutating the original array
+console.log(array);
