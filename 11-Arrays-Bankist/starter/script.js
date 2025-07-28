@@ -79,8 +79,17 @@ const array = [`a`, `b`, `c`, `d`, `e`];
 
 // slice method
 console.log(array.slice(2, 4));
-console.log(array.slice(-1)); // this is last element of array
+console.log(array.slice(-1)); // this is not mutating original array
 
 // splice method
 console.log(array.splice(2, 4)); // this is mutating the original array
 console.log(array);
+
+// REVERSE
+const array2 = [`a`, `z`, `k`, `s`, `u`];
+console.log(array2.reverse()); // It mutates the original array
+console.log(array2);
+
+// ARRAY TO STRING
+const array3 = [`o`, `n`, `a`, `t`];
+console.log(array3.join(`_`)); // It converts array to string with given seperator
