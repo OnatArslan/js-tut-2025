@@ -71,8 +71,6 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
 /////////////////////////////////////////////////
 
 const array = [`a`, `b`, `c`, `d`, `e`];
@@ -93,3 +91,30 @@ console.log(array2);
 // ARRAY TO STRING
 const array3 = [`o`, `n`, `a`, `t`];
 console.log(array3.join(`_`)); // It converts array to string with given seperator
+
+// at() method
+const dummyArr = [23, 11, 64];
+console.log(dummyArr.at(1)); // This is modern way of [] indexing and we have to use at() method
+console.log(dummyArr[1]); // Old version
+
+console.log(dummyArr.at(-1)); // Also we can give negative index for at method
+
+console.log(`Onat`.at(-1)); // at() method also work on strings
+
+// LOOPING ARRAYS
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// If we want performance and full control(break, continue, async/await) have to use for i loop
+for (let index = 0; index < movements.length; index++) {
+  const element = movements[index];
+  console.log(element);
+}
+
+// This is used in callbacks but this can not use async/await or break/continue statements
+movements.forEach((element, index, arr) => {
+  console.log(element, index, arr);
+});
+
+for (let index = 0; index < array.length; index++) {
+  const value = array[index];
+}
