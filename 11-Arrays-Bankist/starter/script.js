@@ -124,3 +124,17 @@ const inputTransferAmount = document.querySelector('.form__input--amount');
 const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
+
+function displayMovements(movements) {
+  containerMovements.innerHTML = ``;
+  movements.forEach((val, i) => {
+    const html = `<div class="movements__row">
+          <div class="movements__type movements__type--${val > 0 ? 'deposit' : 'withdrawal'}">${i} ${val > 0 ? 'deposit' : 'withdrawal'}</div>
+          <div class="movements__date">3 days ago</div>
+          <div class="movements__value">${val}€</div>
+        </div>`;
+    containerMovements.insertAdjacentHTML(`afterbegin`, html);
+  });
+}
+
+displayMovements(account1.movements);
