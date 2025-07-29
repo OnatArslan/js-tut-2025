@@ -251,3 +251,17 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+// First to know all numbers are floating point numbers in javascript
+console.log(23 === 23.0);
+
+// Convert string to numbers
+const string = `1980`;
+
+const number = Number(string);
+console.log(number);
+
+// PARSING STRINGS TO NUMBERS
+console.log(Number.parseInt(``));
+
+randomInt(2, 16);
