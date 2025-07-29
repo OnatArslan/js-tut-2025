@@ -105,12 +105,16 @@ console.log(`Onat`.at(-1)); // at() method also work on strings
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // If we want performance and full control(break, continue, async/await) have to use for i loop
-for (let index = 0; index < movements.length; index++) {
-  const element = movements[index];
-  console.log(element);
+for (let i = 0; i < movements.length; i++) {
+  const value = movements[i];
+  console.log(value);
 }
 
 // This is used in callbacks but this can not use async/await or break/continue statements
 movements.forEach((element, index, arr) => {
-  console.log(element, index, arr);
+  if (element > 0) {
+    console.log(`You deposited ${element}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(element)}`); // abs() method get absolute value
+  }
 });
