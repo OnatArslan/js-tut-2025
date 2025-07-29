@@ -65,12 +65,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
-
 /////////////////////////////////////////////////
 
 const array = [`a`, `b`, `c`, `d`, `e`];
@@ -117,4 +111,16 @@ movements.forEach((element, index, arr) => {
   } else {
     console.log(`You withdrew ${Math.abs(element)}`); // abs() method get absolute value
   }
+});
+
+// forEach method with Maps
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+// With Map first is key and second is value
+currencies.forEach((val, i, arr) => {
+  console.log(i, val);
 });
