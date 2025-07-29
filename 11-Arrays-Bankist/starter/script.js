@@ -114,7 +114,3 @@ for (let index = 0; index < movements.length; index++) {
 movements.forEach((element, index, arr) => {
   console.log(element, index, arr);
 });
-
-for (let index = 0; index < array.length; index++) {
-  const value = array[index];
-}
