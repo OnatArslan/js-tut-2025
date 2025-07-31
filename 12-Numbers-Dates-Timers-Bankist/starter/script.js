@@ -265,3 +265,4 @@ console.log(number);
 console.log(Number.parseInt(``));
 
 randomInt(2, 16);
+console.log(`hello world`);
