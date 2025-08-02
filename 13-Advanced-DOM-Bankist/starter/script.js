@@ -29,5 +29,3 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-
-console.log(`hello world`);
