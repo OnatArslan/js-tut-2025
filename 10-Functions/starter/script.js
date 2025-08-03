@@ -6,7 +6,7 @@ const bookings = [];
 function createBooking(
   flightNum = 1111,
   numPassengers,
-  totalWorth = numPassengers * 199, // Also we can use other parameters in parameters
+  totalWorth = numPassengers * 199 // Also we can use other parameters in parameters
 ) {
   const booking = {
     flightNum,
@@ -65,7 +65,7 @@ function upperFirstWord(str) {
 // HIGHER ORDER FUNCTION
 function tranformer(str, fn) {
   console.log(
-    `Transformed string is '${fn(str)}' and transformed by ${fn.name} function`,
+    `Transformed string is '${fn(str)}' and transformed by ${fn.name} function`
   );
 }
 tranformer(`Javascript is the best`, upperFirstWord); // In this usage upperFirstWord function is callback and transformer is higher order function
@@ -78,7 +78,7 @@ tranformer(`Javascript is the best`, oneWord); // In this usage oneWord function
 //   };
 // }
 
-const greet = greeting => name => console.log(`${greeting} ${name}`); // greet fonksiyonu name fonksiyonunu donduruyor
+const greet = (greeting) => (name) => console.log(`${greeting} ${name}`); // greet fonksiyonu name fonksiyonunu donduruyor
 
 const returnedFunction = greet(`Hey`); // This greet function returns another funtion
 
@@ -94,7 +94,7 @@ const lufthansa = {
   bookings: [],
   book(flightNum, name) {
     console.log(
-      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`,
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
     );
     this.bookings.push({ fligth: `${this.iataCode}${flightNum}`, name });
   },
@@ -202,8 +202,10 @@ console.log(incrementPassanger); // ==> null
 (function () {
   const header = document.querySelector('h1');
   header.style.color = 'red';
-  document.querySelector(`body`).addEventListener(`click`, ev => {
+  document.querySelector(`body`).addEventListener(`click`, (ev) => {
     console.log(ev);
     header.style.color = `blue`;
   });
 })();
+
+console.log('hello world');
