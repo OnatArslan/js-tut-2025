@@ -265,3 +265,15 @@ console.log(number);
 console.log(Number.parseInt(``));
 
 console.log(`hello world`);
+
+const array = [11, 14, 17, 2, 1, 7, 5, 9];
+
+const sortedArr = array.sort();
+console.log(array);
+
+// If we want compare string we need to use str.localeCompare();
+let countries = ['Österreich', 'Andorra', 'Vietnam'];
+
+countries.sort((a, b) => a.localeCompare(b));
+
+console.log(countries); // ['Andorra', 'Österreich', 'Vietnam']
