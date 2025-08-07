@@ -279,3 +279,14 @@ countries.sort((a, b) => a.localeCompare(b));
 console.log(countries); // ['Andorra', 'Österreich', 'Vietnam']
 
 // DATES ------------------------------- ----------------------------------------- ---------------------------------------- --------------------------------------------
+
+const now = new Date(); // Without any arguments new Date() will create current date
+console.log(now);
+
+const date = new Date(`2019-01-26`);
+console.log(date);
+
+// new Date(year, month, date, hours, minutes, seconds, ms); this constructor is getting all date fields
+const fullDate = new Date(2012, 1, 12, 12, 12, 53);
+console.log(fullDate);
+console.log(fullDate.getTime()); // getTime() function will return current time on miliseconds 1329041573000
