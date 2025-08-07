@@ -280,12 +280,19 @@ console.log(countries); // ['Andorra', 'Österreich', 'Vietnam']
 // DATES ------------------------------- ----------------------------------------- ---------------------------------------- --------------------------------------------
 
 const now = new Date(); // Without any arguments new Date() will create current date
-console.log(now);
+console.log(now.toISOString());
+console.log(`-------`);
 
-const date = new Date(`2019-01-26`);
+// const date = new Date(`2019-01-26`); // Wrong way of creating dates because in this string we are not using UTC
+// UTC YYYY-MM-DDTHH:mm:ss.sssZ
+const date = new Date(`2002-01-01T10:05:00.000Z`);
 console.log(date);
 
 // new Date(year, month, date, hours, minutes, seconds, ms); this constructor is getting all date fields
 const fullDate = new Date(2012, 1, 12, 12, 12, 53);
 console.log(fullDate);
 console.log(fullDate.getTime()); // getTime() function will return current time on miliseconds 1329041573000
+
+// MOST SECURE WAY OF CREATING DATES
+const secureDate = new Date(Date.UTC(2002, 0, 12, 12));
+console.log(secureDate);
