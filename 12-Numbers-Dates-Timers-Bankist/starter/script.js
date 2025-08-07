@@ -277,3 +277,5 @@ let countries = ['Österreich', 'Andorra', 'Vietnam'];
 countries.sort((a, b) => a.localeCompare(b));
 
 console.log(countries); // ['Andorra', 'Österreich', 'Vietnam']
+
+// DATES ------------------------------- ----------------------------------------- ---------------------------------------- --------------------------------------------
