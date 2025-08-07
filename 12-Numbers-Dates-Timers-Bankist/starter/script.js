@@ -309,3 +309,17 @@ console.log(newDate);
 const future = new Date(Date.UTC(2040, 0, 1));
 console.log(future);
 console.log(+future); // + operator(convert to number will give us timestampt(ms))
+
+// Internationalizing Dates (IntL)
+const nowEx = new Date();
+
+const formattedForTR = new Intl.DateTimeFormat(`tr-TR`, {
+  hour: `2-digit`,
+  minute: `numeric`,
+  day: `2-digit`,
+  month: `short`,
+  year: `numeric`,
+  weekday: `long`,
+}).format(nowEx);
+
+console.log(formattedForTR);
