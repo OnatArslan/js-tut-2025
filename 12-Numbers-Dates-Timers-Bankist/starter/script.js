@@ -296,3 +296,6 @@ console.log(fullDate.getTime()); // getTime() function will return current time 
 // MOST SECURE WAY OF CREATING DATES
 const secureDate = new Date(Date.UTC(2002, 0, 12, 12));
 console.log(secureDate);
+
+const secureCurrentDate = new Date();
+console.log(secureCurrentDate);
