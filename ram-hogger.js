@@ -14,3 +14,5 @@ for (let i = 0; i < gigabytes; i++) {
 
 console.log('✅ 40 GB FULLY OCCUPIED. Take your screenshot now.');
 setInterval(() => {}, 1000); // Sürekli RAM’de tut
+
+console.log(`07`);
