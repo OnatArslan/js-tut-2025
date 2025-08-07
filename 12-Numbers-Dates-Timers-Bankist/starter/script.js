@@ -299,3 +299,13 @@ console.log(secureDate);
 
 const secureCurrentDate = new Date();
 console.log(secureCurrentDate);
+
+// DATE CALCULATIONS
+const exDate = new Date();
+const newDate = exDate.setDate(exDate.getDate() + 3); // We basicly add 3 days to current date
+console.log(exDate);
+console.log(newDate);
+
+const future = new Date(Date.UTC(2040, 0, 1));
+console.log(future);
+console.log(+future); // + operator(convert to number will give us timestampt(ms))
