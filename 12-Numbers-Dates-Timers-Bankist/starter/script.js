@@ -328,4 +328,3 @@ const formattedForTR = new Intl.DateTimeFormat(`tr-TR`, {
 console.log(formattedForTR);
 
 const date3 = new Date().toISOString();
-console.log(date3);
